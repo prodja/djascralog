@@ -7,8 +7,6 @@ from scrapy import Selector
 import httplib2
 from os import getcwd
 
-import json
-
 class GearBestItem(Item):
     url = Field()
     name = Field()
