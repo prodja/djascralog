@@ -1,0 +1,22 @@
+{% extends  'main.html' %}
+
+{% block article %}
+	<br>
+	<font face="monospace">{{ article.article_date }}</font>
+	<h1>{{ article.article_title }}</h1>
+	<p>{{ article.article_text }}</p>
+	<hr>
+	<div class='large-offset-1 large-8 columns'>
+	<p><h3>Комментарии:</h3></p>
+	{% for comment in comments %}
+		<font face="monospace" color="#cdc5c2">{{ comment.comments_from.username }} {{ comment.comments_date }}:</font><p>{{ comment.comments_text }}</p>
+	{% endfor %}</p>
+	{% if username %}
+	<form action="/articles/addcomment/{{ article.id }}/" method="post">
+		{% csrf_token %}
+		{{ form }}
+		<input type="submit" class = "button" value="Добавить комментарий">
+	</form>
+	{% endif %}
+	</div>
+{% endblock %}

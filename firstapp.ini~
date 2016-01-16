@@ -1,0 +1,8 @@
+#mysite_uwsgi.ini 
+[uwsgi]
+chdir           = /home/faa/.virtualenvs/django_1_8_5/bin/firstapp
+module          = firstapp.wsgi:application
+home            = /home/faa/.virtualenvs/django_1_8_5
+master          = true
+socket          = 127.0.0.1:3031
+vacuum          = true
