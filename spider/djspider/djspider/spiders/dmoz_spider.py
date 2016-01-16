@@ -6,7 +6,6 @@ from scrapy import Selector
 
 import httplib2
 from os import getcwd
-#fuck
 
 class GearBestItem(Item):
     url = Field()
