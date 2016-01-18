@@ -3,6 +3,7 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from scrapy.item import Item, Field
 from scrapy import Selector
+from elasticsearch import Elasticsearch
 
 import httplib2
 from os import getcwd
@@ -27,7 +28,10 @@ class ScrapyTestSpider(CrawlSpider):
 
     def parse_product(self, response):
         item=GearBestItem()
-        item['url']=str(response.url)
+        es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
+        doc="'content':{name:'one_name'}"
+        res = es.index(index="gearbest_index", doc_type='product_type', id=1, body=doc)
+        """item['url']=str(response.url)
         item['name']=response.xpath('//*[@id="mainWrap"]/div[2]/div/h1/text()').extract()[0]
         item['code']=response.xpath('//*[@id="mainWrap"]/div[2]/div/span[2]/text()').extract()[0]
         preg=response.xpath('//*[@id="market_price"]/text()').extract()
@@ -50,6 +54,6 @@ class ScrapyTestSpider(CrawlSpider):
             out.write(str(content))
             out.close()
         else:
-            item['img']='noimg'
+            item['img']='noimg'"""
 
         return item
