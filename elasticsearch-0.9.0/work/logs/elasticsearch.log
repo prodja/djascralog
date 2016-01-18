@@ -1,0 +1,39 @@
+[17:03:53,107][INFO ][node                     ] [Blood Brothers] {elasticsearch/0.9.0}[18392]: initializing ...
+[17:03:53,112][INFO ][plugins                  ] [Blood Brothers] loaded []
+[17:03:55,754][INFO ][node                     ] [Blood Brothers] {elasticsearch/0.9.0}[18392]: initialized
+[17:03:55,754][INFO ][node                     ] [Blood Brothers] {elasticsearch/0.9.0}[18392]: starting ...
+[17:03:55,960][INFO ][transport                ] [Blood Brothers] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
+[17:03:59,003][INFO ][cluster.service          ] [Blood Brothers] new_master [Blood Brothers][1c36dfa2-7699-42d2-b4b0-8ea040d22ba8][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
+[17:03:59,037][INFO ][discovery                ] [Blood Brothers] elasticsearch/1c36dfa2-7699-42d2-b4b0-8ea040d22ba8
+[17:03:59,042][INFO ][http                     ] [Blood Brothers] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
+[17:04:00,059][INFO ][jmx                      ] [Blood Brothers] bound_address {service:jmx:rmi:///jndi/rmi://:9400/jmxrmi}, publish_address {service:jmx:rmi:///jndi/rmi://192.168.10.35:9400/jmxrmi}
+[17:04:00,059][INFO ][node                     ] [Blood Brothers] {elasticsearch/0.9.0}[18392]: started
+[17:04:53,277][INFO ][node                     ] [The Blank] {elasticsearch/0.9.0}[18547]: initializing ...
+[17:04:53,280][INFO ][plugins                  ] [The Blank] loaded []
+[17:04:54,953][INFO ][node                     ] [The Blank] {elasticsearch/0.9.0}[18547]: initialized
+[17:04:54,953][INFO ][node                     ] [The Blank] {elasticsearch/0.9.0}[18547]: starting ...
+[17:04:55,016][INFO ][transport                ] [The Blank] bound_address {inet[/0:0:0:0:0:0:0:0:9301]}, publish_address {inet[/192.168.10.35:9301]}
+[17:04:58,095][INFO ][cluster.service          ] [Blood Brothers] added {[The Blank][968c5e72-079e-4c69-8c9f-e7aaefc37b53][inet[/192.168.10.35:9301]],}, reason: zen-disco-receive(from node[[The Blank][968c5e72-079e-4c69-8c9f-e7aaefc37b53][inet[/192.168.10.35:9301]]])
+[17:04:58,111][INFO ][cluster.service          ] [The Blank] detected_master [Blood Brothers][1c36dfa2-7699-42d2-b4b0-8ea040d22ba8][inet[/192.168.10.35:9300]], added {[Blood Brothers][1c36dfa2-7699-42d2-b4b0-8ea040d22ba8][inet[/192.168.10.35:9300]],}, reason: zen-disco-receive(from [[Blood Brothers][1c36dfa2-7699-42d2-b4b0-8ea040d22ba8][inet[/192.168.10.35:9300]]])
+[17:04:58,112][INFO ][discovery                ] [The Blank] elasticsearch/968c5e72-079e-4c69-8c9f-e7aaefc37b53
+[17:04:58,117][INFO ][http                     ] [The Blank] bound_address {inet[/0:0:0:0:0:0:0:0:9201]}, publish_address {inet[/192.168.10.35:9201]}
+[17:04:58,325][INFO ][jmx                      ] [The Blank] bound_address {service:jmx:rmi:///jndi/rmi://:9401/jmxrmi}, publish_address {service:jmx:rmi:///jndi/rmi://192.168.10.35:9401/jmxrmi}
+[17:04:58,326][INFO ][node                     ] [The Blank] {elasticsearch/0.9.0}[18547]: started
+[17:05:00,426][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: initializing ...
+[17:05:00,430][INFO ][plugins                  ] [Link] loaded []
+[17:05:01,987][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: initialized
+[17:05:01,987][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: starting ...
+[17:05:02,067][INFO ][transport                ] [Link] bound_address {inet[/0:0:0:0:0:0:0:0:9302]}, publish_address {inet[/192.168.10.35:9302]}
+[17:05:05,130][INFO ][cluster.service          ] [Blood Brothers] added {[Link][7638d70a-e5d9-46a7-819d-a53d46323301][inet[/192.168.10.35:9302]],}, reason: zen-disco-receive(from node[[Link][7638d70a-e5d9-46a7-819d-a53d46323301][inet[/192.168.10.35:9302]]])
+[17:05:05,136][INFO ][cluster.service          ] [The Blank] added {[Link][7638d70a-e5d9-46a7-819d-a53d46323301][inet[/192.168.10.35:9302]],}, reason: zen-disco-receive(from [[Blood Brothers][1c36dfa2-7699-42d2-b4b0-8ea040d22ba8][inet[/192.168.10.35:9300]]])
+[17:05:05,142][INFO ][cluster.service          ] [Link] detected_master [Blood Brothers][1c36dfa2-7699-42d2-b4b0-8ea040d22ba8][inet[/192.168.10.35:9300]], added {[Blood Brothers][1c36dfa2-7699-42d2-b4b0-8ea040d22ba8][inet[/192.168.10.35:9300]],[The Blank][968c5e72-079e-4c69-8c9f-e7aaefc37b53][inet[/192.168.10.35:9301]],}, reason: zen-disco-receive(from [[Blood Brothers][1c36dfa2-7699-42d2-b4b0-8ea040d22ba8][inet[/192.168.10.35:9300]]])
+[17:05:05,147][INFO ][discovery                ] [Link] elasticsearch/7638d70a-e5d9-46a7-819d-a53d46323301
+[17:05:05,151][INFO ][http                     ] [Link] bound_address {inet[/0:0:0:0:0:0:0:0:9202]}, publish_address {inet[/192.168.10.35:9202]}
+[17:05:05,338][INFO ][jmx                      ] [Link] bound_address {service:jmx:rmi:///jndi/rmi://:9402/jmxrmi}, publish_address {service:jmx:rmi:///jndi/rmi://192.168.10.35:9402/jmxrmi}
+[17:05:05,339][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: started
+[17:05:12,746][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: stopping ...
+[17:05:12,756][INFO ][cluster.service          ] [Blood Brothers] removed {[Link][7638d70a-e5d9-46a7-819d-a53d46323301][inet[/192.168.10.35:9302]],}, reason: zen-disco-node_left([Link][7638d70a-e5d9-46a7-819d-a53d46323301][inet[/192.168.10.35:9302]])
+[17:05:12,760][INFO ][cluster.service          ] [The Blank] removed {[Link][7638d70a-e5d9-46a7-819d-a53d46323301][inet[/192.168.10.35:9302]],}, reason: zen-disco-receive(from [[Blood Brothers][1c36dfa2-7699-42d2-b4b0-8ea040d22ba8][inet[/192.168.10.35:9300]]])
+[17:05:12,773][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: stopped
+[17:05:12,773][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: closing ...
+[17:05:13,164][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: closed
