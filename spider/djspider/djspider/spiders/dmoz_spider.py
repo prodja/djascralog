@@ -3,7 +3,6 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from scrapy.item import Item, Field
 from scrapy import Selector
-from elasticsearch import Elasticsearch
 
 import httplib2
 from os import getcwd
