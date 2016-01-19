@@ -6,10 +6,13 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 from scrapy import Field
+from scrapy.item import Item
 
-
-class DjspiderItem(scrapy.Item):
-    title = Field()
-    link = Field()
-    desc = Field()
+class GearBestItem(Item):
+    url = Field()
+    name = Field()
+    code = Field()
+    price_reg = Field()
+    price_discount = Field()
+    img = Field()
 

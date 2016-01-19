@@ -7,14 +7,7 @@ from elasticsearch import Elasticsearch
 
 import httplib2
 from os import getcwd
-
-class GearBestItem(Item):
-    url = Field()
-    name = Field()
-    code = Field()
-    price_reg = Field()
-    price_discount = Field()
-    img = Field()
+from djspider.items import GearBestItem
 
 class ScrapyTestSpider(CrawlSpider):
     name = "gearbest"
@@ -28,10 +21,7 @@ class ScrapyTestSpider(CrawlSpider):
 
     def parse_product(self, response):
         item=GearBestItem()
-        es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
-        doc="'content':{name:'one_name'}"
-        res = es.index(index="gearbest_index", doc_type='product_type', id=1, body=doc)
-        """item['url']=str(response.url)
+        item['url']=str(response.url)
         item['name']=response.xpath('//*[@id="mainWrap"]/div[2]/div/h1/text()').extract()[0]
         item['code']=response.xpath('//*[@id="mainWrap"]/div[2]/div/span[2]/text()').extract()[0]
         preg=response.xpath('//*[@id="market_price"]/text()').extract()
@@ -54,6 +44,6 @@ class ScrapyTestSpider(CrawlSpider):
             out.write(str(content))
             out.close()
         else:
-            item['img']='noimg'"""
+            item['img']='noimg'
 
         return item
