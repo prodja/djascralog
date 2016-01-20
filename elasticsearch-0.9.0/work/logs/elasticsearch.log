@@ -37,3 +37,55 @@
 [17:05:12,773][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: stopped
 [17:05:12,773][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: closing ...
 [17:05:13,164][INFO ][node                     ] [Link] {elasticsearch/0.9.0}[18622]: closed
+[19:12:19,594][INFO ][node                     ] [Brass] {elasticsearch/0.9.0}[78836]: initializing ...
+[19:12:19,597][INFO ][plugins                  ] [Brass] loaded []
+[19:12:20,770][INFO ][node                     ] [Brass] {elasticsearch/0.9.0}[78836]: initialized
+[19:12:20,770][INFO ][node                     ] [Brass] {elasticsearch/0.9.0}[78836]: starting ...
+[19:12:20,842][INFO ][transport                ] [Brass] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.61:9300]}
+[19:12:23,902][INFO ][cluster.service          ] [Brass] new_master [Brass][6c00e246-d131-4c13-a1a6-234fdb11d268][inet[/192.168.10.61:9300]], reason: zen-disco-join (elected_as_master)
+[19:12:23,919][INFO ][discovery                ] [Brass] elasticsearch/6c00e246-d131-4c13-a1a6-234fdb11d268
+[19:12:23,922][INFO ][http                     ] [Brass] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.61:9200]}
+[19:12:24,152][INFO ][jmx                      ] [Brass] bound_address {service:jmx:rmi:///jndi/rmi://:9400/jmxrmi}, publish_address {service:jmx:rmi:///jndi/rmi://192.168.10.61:9400/jmxrmi}
+[19:12:24,152][INFO ][node                     ] [Brass] {elasticsearch/0.9.0}[78836]: started
+[19:13:10,390][INFO ][node                     ] [Morpheus] {elasticsearch/0.9.0}[78912]: initializing ...
+[19:13:10,393][INFO ][plugins                  ] [Morpheus] loaded []
+[19:13:11,306][INFO ][node                     ] [Morpheus] {elasticsearch/0.9.0}[78912]: initialized
+[19:13:11,306][INFO ][node                     ] [Morpheus] {elasticsearch/0.9.0}[78912]: starting ...
+[19:13:11,351][INFO ][transport                ] [Morpheus] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.61:9300]}
+[19:13:14,375][INFO ][cluster.service          ] [Morpheus] new_master [Morpheus][ee40ed65-3d00-4462-a365-e5caa27ed77d][inet[/192.168.10.61:9300]], reason: zen-disco-join (elected_as_master)
+[19:13:14,388][INFO ][discovery                ] [Morpheus] elasticsearch/ee40ed65-3d00-4462-a365-e5caa27ed77d
+[19:13:14,390][INFO ][http                     ] [Morpheus] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.61:9200]}
+[19:13:14,478][INFO ][jmx                      ] [Morpheus] bound_address {service:jmx:rmi:///jndi/rmi://:9400/jmxrmi}, publish_address {service:jmx:rmi:///jndi/rmi://192.168.10.61:9400/jmxrmi}
+[19:13:14,479][INFO ][node                     ] [Morpheus] {elasticsearch/0.9.0}[78912]: started
+[19:13:42,167][INFO ][node                     ] [Morpheus] {elasticsearch/0.9.0}[78912]: stopping ...
+[19:13:42,541][INFO ][node                     ] [Morpheus] {elasticsearch/0.9.0}[78912]: stopped
+[19:13:42,541][INFO ][node                     ] [Morpheus] {elasticsearch/0.9.0}[78912]: closing ...
+[19:13:42,566][INFO ][node                     ] [Morpheus] {elasticsearch/0.9.0}[78912]: closed
+[19:14:57,638][INFO ][node                     ] [Annex] {elasticsearch/0.9.0}[79013]: initializing ...
+[19:14:57,654][INFO ][plugins                  ] [Annex] loaded []
+[19:15:00,213][INFO ][node                     ] [Annex] {elasticsearch/0.9.0}[79013]: initialized
+[19:15:00,213][INFO ][node                     ] [Annex] {elasticsearch/0.9.0}[79013]: starting ...
+[19:15:00,817][INFO ][transport                ] [Annex] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.61:9300]}
+[19:15:03,980][INFO ][cluster.service          ] [Annex] new_master [Annex][280430a3-82ba-42e3-b1ff-43ecc1329ea5][inet[/192.168.10.61:9300]], reason: zen-disco-join (elected_as_master)
+[19:15:04,134][INFO ][discovery                ] [Annex] elasticsearch/280430a3-82ba-42e3-b1ff-43ecc1329ea5
+[19:15:04,184][INFO ][http                     ] [Annex] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.61:9200]}
+[19:15:05,981][INFO ][jmx                      ] [Annex] bound_address {service:jmx:rmi:///jndi/rmi://:9400/jmxrmi}, publish_address {service:jmx:rmi:///jndi/rmi://192.168.10.61:9400/jmxrmi}
+[19:15:05,981][INFO ][node                     ] [Annex] {elasticsearch/0.9.0}[79013]: started
+[19:17:30,444][INFO ][node                     ] [Annex] {elasticsearch/0.9.0}[79013]: stopping ...
+[19:17:30,520][INFO ][node                     ] [Annex] {elasticsearch/0.9.0}[79013]: stopped
+[19:17:30,520][INFO ][node                     ] [Annex] {elasticsearch/0.9.0}[79013]: closing ...
+[19:17:30,540][INFO ][node                     ] [Annex] {elasticsearch/0.9.0}[79013]: closed
+[19:18:39,366][INFO ][node                     ] [Morg] {elasticsearch/0.9.0}[79077]: initializing ...
+[19:18:39,385][INFO ][plugins                  ] [Morg] loaded []
+[19:18:40,816][INFO ][node                     ] [Morg] {elasticsearch/0.9.0}[79077]: initialized
+[19:18:40,816][INFO ][node                     ] [Morg] {elasticsearch/0.9.0}[79077]: starting ...
+[19:18:40,877][INFO ][transport                ] [Morg] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.61:9300]}
+[19:18:43,925][INFO ][cluster.service          ] [Morg] new_master [Morg][f5675a85-59ff-4c25-a684-db6b9bb455f0][inet[/192.168.10.61:9300]], reason: zen-disco-join (elected_as_master)
+[19:18:43,941][INFO ][discovery                ] [Morg] elasticsearch/f5675a85-59ff-4c25-a684-db6b9bb455f0
+[19:18:43,945][INFO ][http                     ] [Morg] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.61:9200]}
+[19:18:44,040][INFO ][jmx                      ] [Morg] bound_address {service:jmx:rmi:///jndi/rmi://:9400/jmxrmi}, publish_address {service:jmx:rmi:///jndi/rmi://192.168.10.61:9400/jmxrmi}
+[19:18:44,040][INFO ][node                     ] [Morg] {elasticsearch/0.9.0}[79077]: started
+[19:19:08,138][INFO ][node                     ] [Morg] {elasticsearch/0.9.0}[79077]: stopping ...
+[19:19:08,580][INFO ][node                     ] [Morg] {elasticsearch/0.9.0}[79077]: stopped
+[19:19:08,580][INFO ][node                     ] [Morg] {elasticsearch/0.9.0}[79077]: closing ...
+[19:19:08,585][INFO ][node                     ] [Morg] {elasticsearch/0.9.0}[79077]: closed

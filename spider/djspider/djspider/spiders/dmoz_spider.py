@@ -37,11 +37,11 @@ class ScrapyTestSpider(CrawlSpider):
             arr_name=str(img_url[0]).split('/')
             item_img=str(arr_name[len(arr_name)-1])
             item['img']=getcwd()+'/img/'+item_img
-            h = httplib2.Http('.cache')
-            resp, content = h.request(str(img_url[0]))
-            out = open(item['img'], 'wb')
-            out.write(str(content))
-            out.close()
+            # h = httplib2.Http('.cache')
+            # resp, content = h.request(str(img_url[0]))
+            # out = open(item['img'], 'wb')
+            # out.write(str(content))
+            # out.close()
         else:
             item['img']='noimg'
 
