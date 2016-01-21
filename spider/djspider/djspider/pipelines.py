@@ -4,19 +4,28 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html 
-from json import dumps
 from elasticsearch import Elasticsearch
 
 class DjspiderPipeline(object):
     def process_item(self, item, spider):
-      
+
       # import pdb; pdb.set_trace()
       es = Elasticsearch(hosts=[{'host': 'localhost', 'port': 9200}])
       if(es.exists(index="gearbest_index",doc_type='product_type',id=item['code'])):
         print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-        print str(item['code'])+' - exist'      
-        
-      else:
-        item = dict(item)        
-        es.index(index="gearbest_index",doc_type='product_type', body=item, id=item['code'])
+        print str(item['code'])+' - exist'
+
+        get_doc=es.get(index="gearbest_index",doc_type='product_type',id=item['code'],_source=True)
+        list_of_fieds=['price_reg','price_discount']
+        for lf in list_of_fieds:
+          if lf in item:
+            #import pdb; pdb.set_trace()
+            if lf in get_doc['_source']:
+              print  str(item['code']) + '*==*' + str(item[lf][0])
+              print 'sc=' + str(get_doc['_source'])
+              get_doc['_source'][lf]=list(get_doc['_source'][lf])
+              item[lf]=list(get_doc['_source'][lf]).append(str(item[lf][0]))
+
+      item = dict(item)        
+      es.index(index="gearbest_index",doc_type='product_type', body=item, id=item['code'])
       return item

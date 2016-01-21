@@ -26,14 +26,21 @@ class ScrapyTestSpider(CrawlSpider):
         preg=response.xpath('//*[@id="market_price"]/text()').extract()
         pdis=response.xpath('//*[@id="unit_price"]/text()').extract()
 
-        if(len(preg)>0):
-            item['price_reg']=str(preg[0])
-            item['price_discount']=str(pdis[0])
-        else:
-            item['price_reg']=str(pdis[0])
+        item['price_reg']=[]
+        item['price_discount']=[]
 
-        img_url=response.xpath('//*[@id="js_jqzoom"]/img/@src').extract()
-        if(len(img_url)>0):
+        if(len(preg)>0):
+            item['price_reg'].append(str(preg[0]))
+            item['price_discount'].append(str(pdis[0]))
+        else:
+            item['price_reg'].append(str(pdis[0]))
+        if(item['price_reg']==None):
+            print'****************************************************'
+            print 'pdis= '+str(pdis[0])+'preg= '+preg[0]+' '
+
+        img_url=response.xpath('//*[@id="js_jqzoom"]/img/@src').extract()[0]
+        item['img']=img_url
+        """if(len(img_url)>0):
             arr_name=str(img_url[0]).split('/')
             item_img=str(arr_name[len(arr_name)-1])
             item['img']=getcwd()+'/img/'+item_img
@@ -42,7 +49,9 @@ class ScrapyTestSpider(CrawlSpider):
             # out = open(item['img'], 'wb')
             # out.write(str(content))
             # out.close()
+
         else:
             item['img']='noimg'
+            """
 
         return item
