@@ -1,0 +1,32 @@
+[2016-01-21 10:34:31,322][INFO ][node                     ] [Tagak the Leopard Lord] version[1.4.5], pid[5809], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-01-21 10:34:31,323][INFO ][node                     ] [Tagak the Leopard Lord] initializing ...
+[2016-01-21 10:34:31,329][INFO ][plugins                  ] [Tagak the Leopard Lord] loaded [], sites []
+[2016-01-21 10:34:34,798][INFO ][node                     ] [Tagak the Leopard Lord] initialized
+[2016-01-21 10:34:34,798][INFO ][node                     ] [Tagak the Leopard Lord] starting ...
+[2016-01-21 10:34:34,935][INFO ][transport                ] [Tagak the Leopard Lord] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
+[2016-01-21 10:34:34,964][INFO ][discovery                ] [Tagak the Leopard Lord] elasticsearch/X-QFqCH-Q2yuI3lazyMxdA
+[2016-01-21 10:34:38,744][INFO ][cluster.service          ] [Tagak the Leopard Lord] new_master [Tagak the Leopard Lord][X-QFqCH-Q2yuI3lazyMxdA][tema-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
+[2016-01-21 10:34:38,779][INFO ][http                     ] [Tagak the Leopard Lord] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
+[2016-01-21 10:34:38,780][INFO ][node                     ] [Tagak the Leopard Lord] started
+[2016-01-21 10:34:38,831][INFO ][gateway                  ] [Tagak the Leopard Lord] recovered [0] indices into cluster_state
+[2016-01-21 10:34:53,810][INFO ][node                     ] [Tagak the Leopard Lord] stopping ...
+[2016-01-21 10:34:53,851][INFO ][node                     ] [Tagak the Leopard Lord] stopped
+[2016-01-21 10:34:53,851][INFO ][node                     ] [Tagak the Leopard Lord] closing ...
+[2016-01-21 10:34:53,859][INFO ][node                     ] [Tagak the Leopard Lord] closed
+[2016-01-21 10:35:09,525][INFO ][node                     ] [Asylum] version[1.4.5], pid[5876], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-01-21 10:35:09,526][INFO ][node                     ] [Asylum] initializing ...
+[2016-01-21 10:35:09,532][INFO ][plugins                  ] [Asylum] loaded [], sites []
+[2016-01-21 10:35:12,383][INFO ][node                     ] [Asylum] initialized
+[2016-01-21 10:35:12,384][INFO ][node                     ] [Asylum] starting ...
+[2016-01-21 10:35:12,454][INFO ][transport                ] [Asylum] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
+[2016-01-21 10:35:12,471][INFO ][discovery                ] [Asylum] elasticsearch/lzJ7AnccTSiWZyZoWalyiQ
+[2016-01-21 10:35:16,250][INFO ][cluster.service          ] [Asylum] new_master [Asylum][lzJ7AnccTSiWZyZoWalyiQ][tema-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
+[2016-01-21 10:35:16,283][INFO ][http                     ] [Asylum] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
+[2016-01-21 10:35:16,283][INFO ][node                     ] [Asylum] started
+[2016-01-21 10:35:16,329][INFO ][gateway                  ] [Asylum] recovered [0] indices into cluster_state
+[2016-01-21 10:39:15,103][INFO ][cluster.metadata         ] [Asylum] [gearbest_index] creating index, cause [auto(index api)], shards [5]/[1], mappings [product_type]
+[2016-01-21 10:39:16,167][INFO ][cluster.metadata         ] [Asylum] [gearbest_index] update_mapping [product_type] (dynamic)
+[2016-01-21 18:02:18,001][INFO ][node                     ] [Asylum] stopping ...
+[2016-01-21 18:02:33,554][INFO ][node                     ] [Asylum] stopped
+[2016-01-21 18:02:33,555][INFO ][node                     ] [Asylum] closing ...
+[2016-01-21 18:02:34,521][INFO ][node                     ] [Asylum] closed

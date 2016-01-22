@@ -1,28 +1,26 @@
-[2016-01-21 10:34:31,322][INFO ][node                     ] [Tagak the Leopard Lord] version[1.4.5], pid[5809], build[2aaf797/2015-04-27T08:06:06Z]
-[2016-01-21 10:34:31,323][INFO ][node                     ] [Tagak the Leopard Lord] initializing ...
-[2016-01-21 10:34:31,329][INFO ][plugins                  ] [Tagak the Leopard Lord] loaded [], sites []
-[2016-01-21 10:34:34,798][INFO ][node                     ] [Tagak the Leopard Lord] initialized
-[2016-01-21 10:34:34,798][INFO ][node                     ] [Tagak the Leopard Lord] starting ...
-[2016-01-21 10:34:34,935][INFO ][transport                ] [Tagak the Leopard Lord] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
-[2016-01-21 10:34:34,964][INFO ][discovery                ] [Tagak the Leopard Lord] elasticsearch/X-QFqCH-Q2yuI3lazyMxdA
-[2016-01-21 10:34:38,744][INFO ][cluster.service          ] [Tagak the Leopard Lord] new_master [Tagak the Leopard Lord][X-QFqCH-Q2yuI3lazyMxdA][tema-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
-[2016-01-21 10:34:38,779][INFO ][http                     ] [Tagak the Leopard Lord] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
-[2016-01-21 10:34:38,780][INFO ][node                     ] [Tagak the Leopard Lord] started
-[2016-01-21 10:34:38,831][INFO ][gateway                  ] [Tagak the Leopard Lord] recovered [0] indices into cluster_state
-[2016-01-21 10:34:53,810][INFO ][node                     ] [Tagak the Leopard Lord] stopping ...
-[2016-01-21 10:34:53,851][INFO ][node                     ] [Tagak the Leopard Lord] stopped
-[2016-01-21 10:34:53,851][INFO ][node                     ] [Tagak the Leopard Lord] closing ...
-[2016-01-21 10:34:53,859][INFO ][node                     ] [Tagak the Leopard Lord] closed
-[2016-01-21 10:35:09,525][INFO ][node                     ] [Asylum] version[1.4.5], pid[5876], build[2aaf797/2015-04-27T08:06:06Z]
-[2016-01-21 10:35:09,526][INFO ][node                     ] [Asylum] initializing ...
-[2016-01-21 10:35:09,532][INFO ][plugins                  ] [Asylum] loaded [], sites []
-[2016-01-21 10:35:12,383][INFO ][node                     ] [Asylum] initialized
-[2016-01-21 10:35:12,384][INFO ][node                     ] [Asylum] starting ...
-[2016-01-21 10:35:12,454][INFO ][transport                ] [Asylum] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
-[2016-01-21 10:35:12,471][INFO ][discovery                ] [Asylum] elasticsearch/lzJ7AnccTSiWZyZoWalyiQ
-[2016-01-21 10:35:16,250][INFO ][cluster.service          ] [Asylum] new_master [Asylum][lzJ7AnccTSiWZyZoWalyiQ][tema-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
-[2016-01-21 10:35:16,283][INFO ][http                     ] [Asylum] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
-[2016-01-21 10:35:16,283][INFO ][node                     ] [Asylum] started
-[2016-01-21 10:35:16,329][INFO ][gateway                  ] [Asylum] recovered [0] indices into cluster_state
-[2016-01-21 10:39:15,103][INFO ][cluster.metadata         ] [Asylum] [gearbest_index] creating index, cause [auto(index api)], shards [5]/[1], mappings [product_type]
-[2016-01-21 10:39:16,167][INFO ][cluster.metadata         ] [Asylum] [gearbest_index] update_mapping [product_type] (dynamic)
+[2016-01-22 11:02:52,391][INFO ][node                     ] [Layla Miller] version[1.4.5], pid[15239], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-01-22 11:02:52,412][INFO ][node                     ] [Layla Miller] initializing ...
+[2016-01-22 11:02:52,431][INFO ][plugins                  ] [Layla Miller] loaded [], sites []
+[2016-01-22 11:02:58,263][INFO ][node                     ] [Layla Miller] initialized
+[2016-01-22 11:02:58,264][INFO ][node                     ] [Layla Miller] starting ...
+[2016-01-22 11:02:58,492][INFO ][transport                ] [Layla Miller] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
+[2016-01-22 11:02:58,544][INFO ][discovery                ] [Layla Miller] elasticsearch/a1349O91QReT6NQa5MZ0mg
+[2016-01-22 11:03:02,321][INFO ][cluster.service          ] [Layla Miller] new_master [Layla Miller][a1349O91QReT6NQa5MZ0mg][tema-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
+[2016-01-22 11:03:02,360][INFO ][http                     ] [Layla Miller] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
+[2016-01-22 11:03:02,360][INFO ][node                     ] [Layla Miller] started
+[2016-01-22 11:03:03,463][INFO ][gateway                  ] [Layla Miller] recovered [1] indices into cluster_state
+[2016-01-22 16:27:06,140][INFO ][node                     ] [Wendigo] version[1.4.5], pid[4238], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-01-22 16:27:06,157][INFO ][node                     ] [Wendigo] initializing ...
+[2016-01-22 16:27:06,171][INFO ][plugins                  ] [Wendigo] loaded [], sites []
+[2016-01-22 16:27:12,361][INFO ][node                     ] [Wendigo] initialized
+[2016-01-22 16:27:12,362][INFO ][node                     ] [Wendigo] starting ...
+[2016-01-22 16:27:12,600][INFO ][transport                ] [Wendigo] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
+[2016-01-22 16:27:12,662][INFO ][discovery                ] [Wendigo] elasticsearch/lja29yq8T_ePKe0yUkkwWw
+[2016-01-22 16:27:16,439][INFO ][cluster.service          ] [Wendigo] new_master [Wendigo][lja29yq8T_ePKe0yUkkwWw][tema-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
+[2016-01-22 16:27:16,461][INFO ][http                     ] [Wendigo] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
+[2016-01-22 16:27:16,461][INFO ][node                     ] [Wendigo] started
+[2016-01-22 16:27:17,900][INFO ][gateway                  ] [Wendigo] recovered [1] indices into cluster_state
+[2016-01-22 17:49:01,281][INFO ][node                     ] [Wendigo] stopping ...
+[2016-01-22 17:49:02,167][INFO ][node                     ] [Wendigo] stopped
+[2016-01-22 17:49:02,167][INFO ][node                     ] [Wendigo] closing ...
+[2016-01-22 17:49:02,354][INFO ][node                     ] [Wendigo] closed
