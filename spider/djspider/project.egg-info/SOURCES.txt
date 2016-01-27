@@ -1,0 +1,12 @@
+setup.py
+djspider/__init__.py
+djspider/items.py
+djspider/pipelines.py
+djspider/settings.py
+djspider/spiders/__init__.py
+djspider/spiders/dmoz_spider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

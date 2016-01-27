@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'article.apps.ArticleConfig',
     'loginsys',
+    'logdbox',
 )
 
 MIDDLEWARE_CLASSES = (
