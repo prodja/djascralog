@@ -11,4 +11,4 @@ doc='{"name":"one_name", "arrs":{"el1":1,"els2":2}}'
 #res=es.create(index="gearbest_index",doc_type='product_type',body=doc,id=1)
 b=es.exists(index="gearbest_index",doc_type="product_type",id=1)
 if(b==True):
-	print 'OK' 
+	print 'OK' #111
