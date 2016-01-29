@@ -43,3 +43,55 @@ java.io.IOException: Соединение сброшено другой стор
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
+[2016-01-29 18:15:28,937][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] deleting index
+[2016-01-29 18:18:17,728][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] creating index, cause [api], shards [5]/[1], mappings []
+[2016-01-29 18:18:18,962][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] update_mapping [product_type] (dynamic)
+[2016-01-29 18:21:50,233][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] deleting index
+[2016-01-29 18:23:05,480][DEBUG][action.admin.indices.create] [Cowgirl] [gearbest_index] failed to create
+org.elasticsearch.index.mapper.MapperParsingException: mapping [product_type]
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:405)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:347)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:184)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:154)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.mapper.MapperParsingException: Root type mapping not empty after parsing! Remaining fields:   [name : {type=string}] [img : {type=string}] [code : {type=string}] [price_reg : {type=float}] [url : {type=string}] [price_discount : {type=float}]
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:278)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parseCompressed(DocumentMapperParser.java:192)
+	at org.elasticsearch.index.mapper.MapperService.parse(MapperService.java:444)
+	at org.elasticsearch.index.mapper.MapperService.merge(MapperService.java:317)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:402)
+	... 6 more
+[2016-01-29 18:25:33,517][DEBUG][action.admin.indices.create] [Cowgirl] [gearbest_index] failed to create
+org.elasticsearch.index.mapper.MapperParsingException: mapping [product_type]
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:405)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:347)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:184)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:154)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.mapper.MapperParsingException: Root type mapping not empty after parsing! Remaining fields:   [name : {type=string}] [img : {type=string}] [code : {type=string}] [price_reg : {type=float}] [url : {type=string}] [price_discount : {type=float}]
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parse(DocumentMapperParser.java:278)
+	at org.elasticsearch.index.mapper.DocumentMapperParser.parseCompressed(DocumentMapperParser.java:192)
+	at org.elasticsearch.index.mapper.MapperService.parse(MapperService.java:444)
+	at org.elasticsearch.index.mapper.MapperService.merge(MapperService.java:317)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:402)
+	... 6 more
+[2016-01-29 18:31:40,659][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] creating index, cause [api], shards [5]/[1], mappings [product_type]
+[2016-01-29 18:31:57,791][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] deleting index
+[2016-01-29 18:32:50,004][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] creating index, cause [api], shards [5]/[1], mappings [product_type]
+[2016-01-29 18:34:07,769][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] deleting index
+[2016-01-29 18:34:14,375][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] creating index, cause [api], shards [5]/[1], mappings [product_type]
+[2016-01-29 18:36:22,244][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] deleting index
+[2016-01-29 18:36:32,341][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] creating index, cause [api], shards [5]/[1], mappings [product_type]
+[2016-01-29 18:37:13,475][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] deleting index
+[2016-01-29 18:38:12,270][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] creating index, cause [api], shards [5]/[1], mappings [product_type]
+[2016-01-29 18:38:32,169][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] deleting index
+[2016-01-29 18:39:22,695][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] creating index, cause [api], shards [5]/[1], mappings [product_type]
+[2016-01-29 18:41:01,020][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] deleting index
+[2016-01-29 18:41:06,246][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] creating index, cause [api], shards [5]/[1], mappings [product_type]
+[2016-01-29 18:42:06,346][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] deleting index
+[2016-01-29 18:42:22,782][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] creating index, cause [api], shards [5]/[1], mappings [product_type]
+[2016-01-29 18:43:00,417][INFO ][cluster.metadata         ] [Cowgirl] [gearbest_index] deleting index
