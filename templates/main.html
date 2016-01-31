@@ -15,11 +15,21 @@
 					<li><a href="/auth/login/">Войти</a></li>
 				{% endif %}
 			</ul>
+			<ul class="left">
+				{% if articles or article %}
+					<li><a href='/spider/'>Spider</a></li>
+				{% endif %}
+			</ul>
 		</section>	
 	</div>	
 	<h1 style="margin-left:10%;"><a href="/">Мой блог</a></h1>
 	<div class="row">
-	{% block article %} {% endblock %}
+	{% if spider %}
+		{% block spider %} {% endblock %}
+	{% else %}
+		{% block article %} {% endblock %}
+	{% endif %}
+		
 	{% block login %} {% endblock %}
 	</div>
 </body>

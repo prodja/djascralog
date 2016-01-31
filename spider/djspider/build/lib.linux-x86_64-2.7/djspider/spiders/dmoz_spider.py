@@ -2,7 +2,7 @@
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from scrapy.item import Item, Field
-from scrapy import Selector
+from scrapy import Selector,Request
 
 import httplib2
 from os import getcwd
@@ -11,12 +11,16 @@ from djspider.items import GearBestItem
 class ScrapyTestSpider(CrawlSpider):
     name = "gearbest"
     allowed_domains = ["www.gearbest.com"]
-    start_urls = ["http://www.gearbest.com/car-electronics-c_11247/"]
-    list_parse_page=[r'/car-electronics-c_11247/[0-9]*.html$',r'/car-electronics-c_11247/$']
-    rules = (
-        Rule(LinkExtractor(allow=(list_parse_page), unique=True), follow=True),
-        Rule(LinkExtractor(allow=(r'.*/pp_[0-9]*.html$'), unique=True), callback='parse_product'),
-)
+    start_urls = ["http://www.gearbest.com/car-electronics-c_11247/",
+    ]
+
+    def parse(self, response):
+
+        for href in response.xpath("//a[@class='proImg_a']/@href"):
+            url = response.urljoin(href.extract())
+            yield Request(url, callback=self.parse_product)
+        url = response.urljoin(response.xpath("//a[@class='next']/@href")[0].extract())
+        yield Request(url, callback=self.parse)
 
     def parse_product(self, response):
         item=GearBestItem()
