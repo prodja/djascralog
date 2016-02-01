@@ -6,10 +6,12 @@
 			{% csrf_token %}
 			<label for="search">поиск: </label>
 			<input type="text" name="search" id="search"><input class="button" type="submit" value="найти">
-			{% if message %}<input class="button" type="submit" value="сбросить">{% endif %}
+			{% if message %}<input class="button" id='reset' type="submit" value="reset">{% endif %}
 		</form>
-		{% if message %}
-			{{ message }}
+		{% if finded %}
+			{% for val in finded %}
+				<br>  {{ val.0 }} {{ val.1 }} 
+			{% endfor %}
 		{% endif %}
 </div>
 {% endblock %}

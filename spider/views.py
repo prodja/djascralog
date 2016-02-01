@@ -8,14 +8,26 @@ def spider(request):
 	args={}
 	args.update(csrf(request))
 	args['spider']=1
-	search=request.POST.get('search','')
-	if request.POST:
+	
+	if request.POST and request.POST.get('search','')!='':
+		search=request.POST.get('search','')
 		es = Elasticsearch(hosts=[{'host': 'localhost', 'port': 9200}])
-		#qdsl={"match":{"name" : search}}
-		qdsl="http://localhost:9200/gearbest_index/product_type/_search?q=name:"+str(search)
-		args['message']="Результаты по '"+str(search)+"':"
-		res=es.search(index='gearbest_index',doc_type='product_type',body=qdsl)
-		args['message']+=type(res)
+		qdsl={'fields': ['name', 'code'], 'query': {'match': {'name': search}}}
+		res=es.search(index='gearbest_index',body=qdsl)
+		if(res):
+			args['message']="Результаты по '"+str(search)+"':\n"
+			print res
+
+			res=res['hits']['hits']
+			args['finded']=[]
+
+			for rs in res:
+				val=[rs['fields']['code'][0],rs['fields']['name'][0]]
+				args['finded'].append(val)
+
+		
+	if(request.POST.get('reset','')):
+		args['message']=''
 
 	return render_to_response('spider.html',args)
 
