@@ -12,20 +12,16 @@ def spider(request):
 	if request.POST and request.POST.get('search','')!='':
 		search=request.POST.get('search','')
 		es = Elasticsearch(hosts=[{'host': 'localhost', 'port': 9200}])
-		qdsl={'fields': ['name', 'code'], 'query': {'match': {'name': search}}}
-		res=es.search(index='gearbest_index',body=qdsl)
+		qdsl={'fields': ['name', 'code','url'], 'query': {'match': {'name': search}}}
+		res=es.search(index='gearbest_index',body=qdsl,size=5000)
 		if(res):
-			args['message']="Результаты по '"+str(search)+"':\n"
-			print res
-
 			res=res['hits']['hits']
+			args['message']="Результаты по '"+str(search)+"'. Найдено: "+str(len(res))
 			args['finded']=[]
-
 			for rs in res:
-				val=[rs['fields']['code'][0],rs['fields']['name'][0]]
+				val=[ rs['fields']['code'][0], rs['fields']['name'][0], rs['fields']['url'][0] ]
 				args['finded'].append(val)
 
-		
 	if(request.POST.get('reset','')):
 		args['message']=''
 
