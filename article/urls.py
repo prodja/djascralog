@@ -7,5 +7,5 @@ urlpatterns = [
 
     url(r'^articles/page/(?P<page_number>\d+)/$','article.views.articles'),
 
-    url(r'^', 'article.views.articles'),
+    url(r'^$', 'article.views.articles'),
 ]

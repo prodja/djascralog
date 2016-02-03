@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 STATICFILES_DIRS = (
     '/home/faa/venvs/env27/bin/firstapp',
 )

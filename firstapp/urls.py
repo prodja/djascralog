@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+from django.views.static import serve as static_serve
+from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -23,3 +24,9 @@ urlpatterns = [
     url(r'^spider/$',include('spider.urls')),
     url(r'^',include('article.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns.extend([
+        url(r'^media/(?P<path>.*)$', static_serve, {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+        url(r'^static/(?P<path>.*)$', static_serve, {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
+    ])

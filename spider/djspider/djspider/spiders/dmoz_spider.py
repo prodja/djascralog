@@ -1,14 +1,11 @@
 #! coding: utf-8
-from scrapy.spiders import CrawlSpider, Rule
-from scrapy.linkextractors import LinkExtractor
-from scrapy.item import Item, Field
-from scrapy import Selector,Request
 
+import scrapy
 import httplib2
-from os import getcwd
+from scrapy import Request
 from djspider.items import GearBestItem
 
-class ScrapyTestSpider(CrawlSpider):
+class ScrapyTestSpider(scrapy.Spider):
     name = "gearbest"
     allowed_domains = ["www.gearbest.com"]
     start_urls = ["http://www.gearbest.com/car-electronics-c_11247/",
@@ -19,6 +16,7 @@ class ScrapyTestSpider(CrawlSpider):
         for href in response.xpath("//a[@class='proImg_a']/@href"):
             url = response.urljoin(href.extract())
             yield Request(url, callback=self.parse_product)
+
         url = response.urljoin(response.xpath("//a[@class='next']/@href")[0].extract())
         yield Request(url, callback=self.parse)
 
@@ -41,18 +39,5 @@ class ScrapyTestSpider(CrawlSpider):
 
         img_url=response.xpath('//*[@id="js_jqzoom"]/img/@src').extract()[0]
         item['img']=img_url
-
-        #создание картинки из спарсенной ссылки
-        """if(len(img_url)>0):
-            arr_name=str(img_url[0]).split('/')
-            item_img=str(arr_name[len(arr_name)-1])
-            item['img']=getcwd()+'/img/'+item_img
-            h = httplib2.Http('.cache')
-            resp, content = h.request(str(img_url[0]))
-            out = open(item['img'], 'wb')
-            out.write(str(content))
-            out.close()
-        else:
-            item['img']='noimg'
-            """
+        
         return item
