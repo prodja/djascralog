@@ -1,0 +1,111 @@
+[2016-02-01 19:33:14,596][DEBUG][action.search.type       ] [Vampire by Night] [gearbest_index][0], node[Fe3sBKG8QGqiENpq4-jEOg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7105faf8] lastShard [true]
+org.elasticsearch.search.SearchParseException: [gearbest_index][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [_na_]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:277)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:231)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:228)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from org.elasticsearch.common.bytes.ChannelBufferBytesReference@593d8db3
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:259)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:657)
+	... 9 more
+[2016-02-01 19:33:14,599][DEBUG][action.search.type       ] [Vampire by Night] [gearbest_index][2], node[Fe3sBKG8QGqiENpq4-jEOg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7105faf8]
+org.elasticsearch.search.SearchParseException: [gearbest_index][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [_na_]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:277)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:231)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:228)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from org.elasticsearch.common.bytes.ChannelBufferBytesReference@593d8db3
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:259)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:657)
+	... 9 more
+[2016-02-01 19:33:14,600][DEBUG][action.search.type       ] [Vampire by Night] All shards failed for phase: [query]
+org.elasticsearch.search.SearchParseException: [gearbest_index][2]: from[-1],size[-1]: Parse Failure [Failed to parse source [_na_]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:277)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:231)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:228)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from org.elasticsearch.common.bytes.ChannelBufferBytesReference@593d8db3
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:259)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:657)
+	... 9 more
+[2016-02-01 19:33:14,598][DEBUG][action.search.type       ] [Vampire by Night] [gearbest_index][1], node[Fe3sBKG8QGqiENpq4-jEOg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7105faf8] lastShard [true]
+org.elasticsearch.search.SearchParseException: [gearbest_index][1]: from[-1],size[-1]: Parse Failure [Failed to parse source [_na_]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:277)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:231)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:228)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from org.elasticsearch.common.bytes.ChannelBufferBytesReference@593d8db3
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:259)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:657)
+	... 9 more
+[2016-02-01 19:33:14,597][DEBUG][action.search.type       ] [Vampire by Night] [gearbest_index][4], node[Fe3sBKG8QGqiENpq4-jEOg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7105faf8] lastShard [true]
+org.elasticsearch.search.SearchParseException: [gearbest_index][4]: from[-1],size[-1]: Parse Failure [Failed to parse source [_na_]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:277)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:231)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:228)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from org.elasticsearch.common.bytes.ChannelBufferBytesReference@593d8db3
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:259)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:657)
+	... 9 more
+[2016-02-01 19:33:14,596][DEBUG][action.search.type       ] [Vampire by Night] [gearbest_index][3], node[Fe3sBKG8QGqiENpq4-jEOg], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7105faf8] lastShard [true]
+org.elasticsearch.search.SearchParseException: [gearbest_index][3]: from[-1],size[-1]: Parse Failure [Failed to parse source [_na_]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:277)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:231)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:228)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from org.elasticsearch.common.bytes.ChannelBufferBytesReference@593d8db3
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:259)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:657)
+	... 9 more
+[2016-02-02 17:52:53,934][INFO ][node                     ] [Angel] version[1.4.5], pid[30466], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-02-02 17:52:53,935][INFO ][node                     ] [Angel] initializing ...
+[2016-02-02 17:52:53,943][INFO ][plugins                  ] [Angel] loaded [], sites [head]
+[2016-02-02 17:52:57,112][INFO ][node                     ] [Angel] initialized
+[2016-02-02 17:52:57,113][INFO ][node                     ] [Angel] starting ...
+[2016-02-02 17:52:57,280][INFO ][transport                ] [Angel] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
+[2016-02-02 17:52:57,304][INFO ][discovery                ] [Angel] elasticsearch/M9Th2mt0QC-_eGS0IJOPiQ
+[2016-02-02 17:53:01,085][INFO ][cluster.service          ] [Angel] new_master [Angel][M9Th2mt0QC-_eGS0IJOPiQ][faa-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
+[2016-02-02 17:53:01,121][INFO ][http                     ] [Angel] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
+[2016-02-02 17:53:01,122][INFO ][node                     ] [Angel] started
+[2016-02-02 17:53:01,881][INFO ][gateway                  ] [Angel] recovered [1] indices into cluster_state
+[2016-02-02 17:55:13,101][INFO ][node                     ] [Angel] stopping ...
+[2016-02-02 17:55:13,176][INFO ][node                     ] [Angel] stopped
+[2016-02-02 17:55:13,176][INFO ][node                     ] [Angel] closing ...
+[2016-02-02 17:55:13,183][INFO ][node                     ] [Angel] closed

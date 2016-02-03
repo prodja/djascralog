@@ -13,7 +13,7 @@ def spider(request):
 		search=request.POST.get('search','')
 		es = Elasticsearch(hosts=[{'host': 'localhost', 'port': 9200}])
 		qdsl={'fields': ['name', 'code','url'], 'query': {'match': {'name': search}}}
-		res=es.search(index='gearbest_index',body=qdsl,size=5000)
+		res=es.search(index='gearbest_index',doc_type='product_type', body=qdsl,size=5000)
 		if(res):
 			res=res['hits']['hits']
 			args['message']="Результаты по '"+str(search)+"'. Найдено: "+str(len(res))
