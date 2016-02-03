@@ -13,10 +13,12 @@ def spider(request):
 		search=request.POST.get('search','')
 		es = Elasticsearch(hosts=[{'host': 'localhost', 'port': 9200}])
 		qdsl={'fields': ['name', 'code','url'], 'query': {'match': {'name': search}}}
+		qcount={'query': {'match': {'name': search}}}
 		res=es.search(index='gearbest_index',doc_type='product_type', body=qdsl,size=5000)
+		cnt=es.count(index='gearbest_index',doc_type='product_type', body=qcount)
 		if(res):
 			res=res['hits']['hits']
-			args['message']="Результаты по '"+str(search)+"'. Найдено: "+str(len(res))
+			args['message']="Результаты по '"+str(search)+"'. Найдено: "+str(len(res))+" cnt="+str(cnt['count'])
 			args['finded']=[]
 			for rs in res:
 				val=[ rs['fields']['code'][0], rs['fields']['name'][0], rs['fields']['url'][0] ]
