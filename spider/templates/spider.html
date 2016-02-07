@@ -2,13 +2,13 @@
 
 {% block spider %}
 <div class="large-offset-1 large-12 columns">
-		<form action="/spider/" method="post">{% csrf_token %}
-			<label for="search">поиск: </label>
-			<input type="text" name="search" id="search"><input class="button" type="submit" value="найти">
-			{% if message %}<input class="button" id='reset' type="submit" value="reset">{% endif %}
+		<form action="/spider/" method="post">
+			{% csrf_token %}
+			{{ search_form }}
 		</form>
+		{{ message }}
 		{% if finded %}
-			{{ message }} <br><br>
+			<br><br>
 			<div class="large-offset-1 large-10 columns">
 			{% for val in finded %}
 				<p> <b>Code:</b> {{ val.code.0 }} <br> <b>name:</b> {{ val.name.0 }} <br> <b>url:</b> <a>{{ val.url.0 }}</a> </p>
