@@ -1443,3 +1443,7 @@ Caused by: org.elasticsearch.index.query.QueryParsingException: [gearbest_index]
 [2016-02-08 13:33:58,959][INFO ][http                     ] [Anais] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
 [2016-02-08 13:33:58,959][INFO ][node                     ] [Anais] started
 [2016-02-08 13:33:59,816][INFO ][gateway                  ] [Anais] recovered [1] indices into cluster_state
+[2016-02-08 17:59:30,227][INFO ][node                     ] [Anais] stopping ...
+[2016-02-08 17:59:30,362][INFO ][node                     ] [Anais] stopped
+[2016-02-08 17:59:30,363][INFO ][node                     ] [Anais] closing ...
+[2016-02-08 17:59:30,402][INFO ][node                     ] [Anais] closed
