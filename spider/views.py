@@ -5,6 +5,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response, redirect
 from re import match
 from forms import SearchForm
+from django.core.paginator import Paginator
 
 def spider(request):
 	context={}	
@@ -20,6 +21,8 @@ def spider(request):
 
 			if len(find)>1:
 
+				fr=0
+
 				find=find.encode('utf-8')
 				find=find.lower()
 				find=find.strip('*./:,?!+-=&?\'"')
@@ -27,7 +30,7 @@ def spider(request):
 
 				es = Elasticsearch(hosts=[{'host': 'localhost', 'port': 9200}])
 				qdsl={'fields': ['name', 'code','url'], 'query': {'match': {'_all': find}}}
-				res=es.search(index='gearbest_index',doc_type='product_type', body=qdsl,size=5000)
+				res=es.search(index='gearbest_index',doc_type='product_type', body=qdsl,size=15,from_=fr)
 
 				if(res):
 					res=res['hits']['hits']
@@ -35,6 +38,9 @@ def spider(request):
 					for rs in res:
 						val = rs['fields']
 						context['finded'].append(val)
+
+					context['finded']=Paginator(context['finded'], 5)
+					context['finded']=context['finded'].page(2)
 
 				context['message']="Результаты по '"+str(find)+' ('+str(type(find))+") '. Найдено: "+str(len(res))
 
