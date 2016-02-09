@@ -1,4 +1,5 @@
-#! coding: utf-8
+#coding=utf-8
+
 from django.shortcuts import render
 from elasticsearch import Elasticsearch
 from django.template import RequestContext
@@ -21,10 +22,8 @@ def spider(request):
 			res=res['hits']['hits']
 			context['message']="Результаты по '"+str(search)+"'. Найдено: "+str(len(res))+" cnt="+str(cnt['count'])
 			context['finded']=[]
-			for rs in res:
-				val = rs['fields']
-				# val=[ rs['fields']['code'][0], rs['fields']['name'][0], rs['fields']['url'][0] ]
-				context['finded'].append(val)
+			for rs in res:				
+				context['finded'].append(rs['fields'])
 
 	if(request.POST.get('reset','')):
 		context['message']=''
