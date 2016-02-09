@@ -1,57 +1,45 @@
-[2016-02-03 11:23:39,957][INFO ][node                     ] [Alcmena] version[1.4.5], pid[7010], build[2aaf797/2015-04-27T08:06:06Z]
-[2016-02-03 11:23:39,958][INFO ][node                     ] [Alcmena] initializing ...
-[2016-02-03 11:23:40,005][INFO ][plugins                  ] [Alcmena] loaded [], sites [head]
-[2016-02-03 11:23:47,411][INFO ][node                     ] [Alcmena] initialized
-[2016-02-03 11:23:47,411][INFO ][node                     ] [Alcmena] starting ...
-[2016-02-03 11:23:47,793][INFO ][transport                ] [Alcmena] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
-[2016-02-03 11:23:47,845][INFO ][discovery                ] [Alcmena] elasticsearch/hDGPhYAFRaCOKRN87FXRCg
-[2016-02-03 11:23:51,629][INFO ][cluster.service          ] [Alcmena] new_master [Alcmena][hDGPhYAFRaCOKRN87FXRCg][faa-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
-[2016-02-03 11:23:51,659][INFO ][http                     ] [Alcmena] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
-[2016-02-03 11:23:51,660][INFO ][node                     ] [Alcmena] started
-[2016-02-03 11:23:53,157][INFO ][gateway                  ] [Alcmena] recovered [1] indices into cluster_state
-[2016-02-03 11:48:56,326][WARN ][monitor.jvm              ] [Alcmena] [gc][young][1504][4] duration [4.2s], collections [1]/[4.8s], total [4.2s]/[4.4s], memory [95.4mb]->[33mb]/[990.7mb], all_pools {[young] [68mb]->[266.6kb]/[266.2mb]}{[survivor] [8.5mb]->[8.5mb]/[33.2mb]}{[old] [18.8mb]->[24.2mb]/[691.2mb]}
-[2016-02-03 17:48:55,728][DEBUG][action.count             ] [Alcmena] [gearbest_index][0], node[hDGPhYAFRaCOKRN87FXRCg], [P], s[STARTED]: failed to execute [[[gearbest_index]][product_type], source[{"fields": ["name", "code", "url"], "query": {"match": {"name": "usb"}}}]]
-org.elasticsearch.index.query.QueryParsingException: [gearbest_index] request does not support [fields]
-	at org.elasticsearch.index.query.IndexQueryParserService.parseQuery(IndexQueryParserService.java:360)
-	at org.elasticsearch.action.count.TransportCountAction.shardOperation(TransportCountAction.java:187)
-	at org.elasticsearch.action.count.TransportCountAction.shardOperation(TransportCountAction.java:66)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
-[2016-02-03 17:48:55,728][DEBUG][action.count             ] [Alcmena] [gearbest_index][2], node[hDGPhYAFRaCOKRN87FXRCg], [P], s[STARTED]: failed to execute [[[gearbest_index]][product_type], source[{"fields": ["name", "code", "url"], "query": {"match": {"name": "usb"}}}]]
-org.elasticsearch.index.query.QueryParsingException: [gearbest_index] request does not support [fields]
-	at org.elasticsearch.index.query.IndexQueryParserService.parseQuery(IndexQueryParserService.java:360)
-	at org.elasticsearch.action.count.TransportCountAction.shardOperation(TransportCountAction.java:187)
-	at org.elasticsearch.action.count.TransportCountAction.shardOperation(TransportCountAction.java:66)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
-[2016-02-03 17:48:55,728][DEBUG][action.count             ] [Alcmena] [gearbest_index][1], node[hDGPhYAFRaCOKRN87FXRCg], [P], s[STARTED]: failed to execute [[[gearbest_index]][product_type], source[{"fields": ["name", "code", "url"], "query": {"match": {"name": "usb"}}}]]
-org.elasticsearch.index.query.QueryParsingException: [gearbest_index] request does not support [fields]
-	at org.elasticsearch.index.query.IndexQueryParserService.parseQuery(IndexQueryParserService.java:360)
-	at org.elasticsearch.action.count.TransportCountAction.shardOperation(TransportCountAction.java:187)
-	at org.elasticsearch.action.count.TransportCountAction.shardOperation(TransportCountAction.java:66)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
-[2016-02-03 17:48:55,816][DEBUG][action.count             ] [Alcmena] [gearbest_index][3], node[hDGPhYAFRaCOKRN87FXRCg], [P], s[STARTED]: failed to execute [[[gearbest_index]][product_type], source[{"fields": ["name", "code", "url"], "query": {"match": {"name": "usb"}}}]]
-org.elasticsearch.index.query.QueryParsingException: [gearbest_index] request does not support [fields]
-	at org.elasticsearch.index.query.IndexQueryParserService.parseQuery(IndexQueryParserService.java:360)
-	at org.elasticsearch.action.count.TransportCountAction.shardOperation(TransportCountAction.java:187)
-	at org.elasticsearch.action.count.TransportCountAction.shardOperation(TransportCountAction.java:66)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
-[2016-02-03 17:48:55,728][DEBUG][action.count             ] [Alcmena] [gearbest_index][4], node[hDGPhYAFRaCOKRN87FXRCg], [P], s[STARTED]: failed to execute [[[gearbest_index]][product_type], source[{"fields": ["name", "code", "url"], "query": {"match": {"name": "usb"}}}]]
-org.elasticsearch.index.query.QueryParsingException: [gearbest_index] request does not support [fields]
-	at org.elasticsearch.index.query.IndexQueryParserService.parseQuery(IndexQueryParserService.java:360)
-	at org.elasticsearch.action.count.TransportCountAction.shardOperation(TransportCountAction.java:187)
-	at org.elasticsearch.action.count.TransportCountAction.shardOperation(TransportCountAction.java:66)
-	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
+[2016-02-09 11:13:49,637][INFO ][node                     ] [Dougboy] version[1.4.5], pid[4081], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-02-09 11:13:49,638][INFO ][node                     ] [Dougboy] initializing ...
+[2016-02-09 11:13:49,668][INFO ][plugins                  ] [Dougboy] loaded [], sites [head]
+[2016-02-09 11:13:55,831][INFO ][node                     ] [Dougboy] initialized
+[2016-02-09 11:13:55,832][INFO ][node                     ] [Dougboy] starting ...
+[2016-02-09 11:13:56,049][INFO ][transport                ] [Dougboy] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
+[2016-02-09 11:13:56,102][INFO ][discovery                ] [Dougboy] elasticsearch/qd8bxsYgTIW2eAycKMssKg
+[2016-02-09 11:13:59,875][INFO ][cluster.service          ] [Dougboy] new_master [Dougboy][qd8bxsYgTIW2eAycKMssKg][faa-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
+[2016-02-09 11:13:59,909][INFO ][http                     ] [Dougboy] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
+[2016-02-09 11:13:59,910][INFO ][node                     ] [Dougboy] started
+[2016-02-09 11:14:00,985][INFO ][gateway                  ] [Dougboy] recovered [1] indices into cluster_state
+[2016-02-09 13:49:12,150][INFO ][node                     ] [Dougboy] stopping ...
+[2016-02-09 13:49:12,383][INFO ][node                     ] [Dougboy] stopped
+[2016-02-09 13:49:12,384][INFO ][node                     ] [Dougboy] closing ...
+[2016-02-09 13:49:12,443][INFO ][node                     ] [Dougboy] closed
+[2016-02-09 13:56:39,912][INFO ][node                     ] [Chaka] version[1.4.5], pid[5547], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-02-09 13:56:39,913][INFO ][node                     ] [Chaka] initializing ...
+[2016-02-09 13:56:39,932][INFO ][plugins                  ] [Chaka] loaded [], sites [head]
+[2016-02-09 13:56:44,279][INFO ][node                     ] [Chaka] initialized
+[2016-02-09 13:56:44,279][INFO ][node                     ] [Chaka] starting ...
+[2016-02-09 13:56:44,416][INFO ][transport                ] [Chaka] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
+[2016-02-09 13:56:44,487][INFO ][discovery                ] [Chaka] elasticsearch/_Zlr8sctQPuMAwy9PORGLw
+[2016-02-09 13:56:48,278][INFO ][cluster.service          ] [Chaka] new_master [Chaka][_Zlr8sctQPuMAwy9PORGLw][faa-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
+[2016-02-09 13:56:48,306][INFO ][http                     ] [Chaka] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
+[2016-02-09 13:56:48,306][INFO ][node                     ] [Chaka] started
+[2016-02-09 13:56:49,286][INFO ][gateway                  ] [Chaka] recovered [1] indices into cluster_state
+[2016-02-09 15:18:28,142][INFO ][node                     ] [Chaka] stopping ...
+[2016-02-09 15:18:28,216][INFO ][node                     ] [Chaka] stopped
+[2016-02-09 15:18:28,216][INFO ][node                     ] [Chaka] closing ...
+[2016-02-09 15:18:28,226][INFO ][node                     ] [Chaka] closed
+[2016-02-09 17:41:01,639][INFO ][node                     ] [Volstagg] version[1.4.5], pid[9435], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-02-09 17:41:01,656][INFO ][node                     ] [Volstagg] initializing ...
+[2016-02-09 17:41:01,720][INFO ][plugins                  ] [Volstagg] loaded [], sites [head]
+[2016-02-09 17:41:07,372][INFO ][node                     ] [Volstagg] initialized
+[2016-02-09 17:41:07,373][INFO ][node                     ] [Volstagg] starting ...
+[2016-02-09 17:41:07,620][INFO ][transport                ] [Volstagg] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
+[2016-02-09 17:41:07,675][INFO ][discovery                ] [Volstagg] elasticsearch/hg1ofT0KSEm9eNGorYdqAg
+[2016-02-09 17:41:11,454][INFO ][cluster.service          ] [Volstagg] new_master [Volstagg][hg1ofT0KSEm9eNGorYdqAg][faa-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
+[2016-02-09 17:41:11,488][INFO ][http                     ] [Volstagg] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
+[2016-02-09 17:41:11,489][INFO ][node                     ] [Volstagg] started
+[2016-02-09 17:41:12,626][INFO ][gateway                  ] [Volstagg] recovered [1] indices into cluster_state
+[2016-02-09 17:58:20,985][INFO ][node                     ] [Volstagg] stopping ...
+[2016-02-09 17:58:21,076][INFO ][node                     ] [Volstagg] stopped
+[2016-02-09 17:58:21,076][INFO ][node                     ] [Volstagg] closing ...
+[2016-02-09 17:58:21,083][INFO ][node                     ] [Volstagg] closed
