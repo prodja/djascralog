@@ -6,11 +6,13 @@ from re import match
 from forms import SearchForm
 from django.core.paginator import Paginator
 from fns import sel_from_elast
+#from django.core.files.uploadedfile import UploadedFile
 
 def spider(request,page=1,zap_from_get=''):
 	context={}	
 	context['spider']=1
 	hits_count=7
+	#file_data = {'sub': UploadedFile('/static/search.png')}
 
 	if request.method == 'POST':
 
@@ -36,6 +38,8 @@ def spider(request,page=1,zap_from_get=''):
 	else: 
 		context['search_form'] = SearchForm()
 		if zap_from_get!='':
+			#s={'search':zap_from_get}
+			#file_data=dict(file_data.items()+s.items()) SearchForm(file_data)
 			context['search_form'] = SearchForm({'search':zap_from_get})
 			context['zap_from_get']=zap_from_get
 			context=dict(context.items()+sel_from_elast(zap_from_get,['name', 'code','url'],'gearbest_index','product_type',hits_count,int(page)-1).items())

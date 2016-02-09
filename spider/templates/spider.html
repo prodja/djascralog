@@ -2,9 +2,10 @@
 
 {% block spider %}
 <div class="large-offset-1 large-12 columns">
-		<form action="/spider/" method="post">
+		<form action="/spider/" method="post" enctype="multipart/form-data">
 			{% csrf_token %}
 			{{ search_form }}
+			<input type='image' src='/static/search.png' width='60' height='60'> 
 		</form>
 		{{ message }}
 		{% if finded %}

@@ -13,3 +13,18 @@
 [2016-02-09 13:49:12,383][INFO ][node                     ] [Dougboy] stopped
 [2016-02-09 13:49:12,384][INFO ][node                     ] [Dougboy] closing ...
 [2016-02-09 13:49:12,443][INFO ][node                     ] [Dougboy] closed
+[2016-02-09 13:56:39,912][INFO ][node                     ] [Chaka] version[1.4.5], pid[5547], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-02-09 13:56:39,913][INFO ][node                     ] [Chaka] initializing ...
+[2016-02-09 13:56:39,932][INFO ][plugins                  ] [Chaka] loaded [], sites [head]
+[2016-02-09 13:56:44,279][INFO ][node                     ] [Chaka] initialized
+[2016-02-09 13:56:44,279][INFO ][node                     ] [Chaka] starting ...
+[2016-02-09 13:56:44,416][INFO ][transport                ] [Chaka] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
+[2016-02-09 13:56:44,487][INFO ][discovery                ] [Chaka] elasticsearch/_Zlr8sctQPuMAwy9PORGLw
+[2016-02-09 13:56:48,278][INFO ][cluster.service          ] [Chaka] new_master [Chaka][_Zlr8sctQPuMAwy9PORGLw][faa-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
+[2016-02-09 13:56:48,306][INFO ][http                     ] [Chaka] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
+[2016-02-09 13:56:48,306][INFO ][node                     ] [Chaka] started
+[2016-02-09 13:56:49,286][INFO ][gateway                  ] [Chaka] recovered [1] indices into cluster_state
+[2016-02-09 15:18:28,142][INFO ][node                     ] [Chaka] stopping ...
+[2016-02-09 15:18:28,216][INFO ][node                     ] [Chaka] stopped
+[2016-02-09 15:18:28,216][INFO ][node                     ] [Chaka] closing ...
+[2016-02-09 15:18:28,226][INFO ][node                     ] [Chaka] closed
