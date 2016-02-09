@@ -8,7 +8,7 @@
 		</form>
 		{{ message }}
 		{% if finded %}
-			<br><br>
+			Результаты по '{{ zap_from_get }}':<br><br>
 			<div class="large-offset-1 large-10 columns">
 			{% for val in finded %}
 				<p> <b>Code:</b> {{ val.code.0 }} <br> <b>name:</b> {{ val.name.0 }} <br> <b>url:</b> <a>{{ val.url.0 }}</a> </p>
@@ -18,16 +18,16 @@
 		{% endif %}
 
 		<div class="row">
-    <div class="large-3 large-offset-5 columns">
+    <div class="large-12 large-offset-2 columns">
    	 <ul class="pagination">
 
    		 {% for page in pages %}
 
    			 {% if page == curpage %}
    				 <li class="current">
-   					 <a href="/spider/{{ page }}/{{ zap }}">{{ page }}</a></li>
+   					 <a href="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
    			 {% else %}
-   				 <li><a href="/spider/{{ page }}/{{ zap }}">{{ page }}</a></li>
+   				 <li><a href="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
    			 {% endif %}
 
    		 {% endfor %}
