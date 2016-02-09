@@ -25,5 +25,5 @@ def sel_from_elast(find='',fields=[], index_doc='gearbest_index',doctype='produc
 	for rs in res:
 		val = rs['fields']
 		finded.append(val)
-
+	print 'pgs='+ str(pages)
 	return finded, pages, page_count,

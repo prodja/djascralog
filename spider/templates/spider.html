@@ -1,7 +1,16 @@
 {% extends  'main.html' %}
 {% load static %}
-
 {% block spider %}
+<script type="text/javascript" src="/media/js/jquery-2.2.0.min.js">
+		$('#id_search').keypress(function(eventObject){
+		  alert('Вы ввели символ с клавиатуры. Его код равен ' + eventObject.which);}
+	$(document).ready(function()
+	{
+		alert('asdasd')
+		$('#foo').keypress();
+	});
+
+</script>
 <div class="large-offset-1 large-12 columns">
 		<form action="/spider/" method="post" enctype="multipart/form-data">
 			{% csrf_token %}

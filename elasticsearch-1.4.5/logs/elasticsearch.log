@@ -43,3 +43,14 @@
 [2016-02-09 17:58:21,076][INFO ][node                     ] [Volstagg] stopped
 [2016-02-09 17:58:21,076][INFO ][node                     ] [Volstagg] closing ...
 [2016-02-09 17:58:21,083][INFO ][node                     ] [Volstagg] closed
+[2016-02-09 21:12:42,647][INFO ][node                     ] [Cold War] version[1.4.5], pid[29125], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-02-09 21:12:42,649][INFO ][node                     ] [Cold War] initializing ...
+[2016-02-09 21:12:42,667][INFO ][plugins                  ] [Cold War] loaded [], sites [head]
+[2016-02-09 21:12:48,191][INFO ][node                     ] [Cold War] initialized
+[2016-02-09 21:12:48,197][INFO ][node                     ] [Cold War] starting ...
+[2016-02-09 21:12:48,642][INFO ][transport                ] [Cold War] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.23:9300]}
+[2016-02-09 21:12:48,792][INFO ][discovery                ] [Cold War] elasticsearch/yEfozy3_RGqrENmhXLKkdg
+[2016-02-09 21:12:52,639][INFO ][cluster.service          ] [Cold War] new_master [Cold War][yEfozy3_RGqrENmhXLKkdg][faa-HP-15-Notebook-PC][inet[/192.168.1.23:9300]], reason: zen-disco-join (elected_as_master)
+[2016-02-09 21:12:52,693][INFO ][http                     ] [Cold War] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.23:9200]}
+[2016-02-09 21:12:52,694][INFO ][node                     ] [Cold War] started
+[2016-02-09 21:12:53,704][INFO ][gateway                  ] [Cold War] recovered [1] indices into cluster_state
