@@ -1,17 +1,24 @@
 {% extends  'main.html' %}
+{% load static %}
 
 {% block spider %}
 <div class="large-offset-1 large-12 columns">
 		<form action="/spider/" method="post" enctype="multipart/form-data">
 			{% csrf_token %}
 			{{ search_form }}
-			<input type='image' src='/static/search.png' width='60' height='60'> 
+			<input type='image' src='/media/search.png' width='60' height='60'> 
 		</form>
-		{{ message }}
-		{% if finded %}
+		
+		{% if search_form.errors  %}
+		{% for error in search_form.errors %}
+			{{error}}<br>
+		{% endfor %}
+		{% endif %}
+
+		{% if items %}
 			Результаты по '{{ zap_from_get }}':<br><br>
 			<div class="large-offset-1 large-10 columns">
-			{% for val in finded %}
+			{% for val in items %}
 				<p> <b>Code:</b> {{ val.code.0 }} <br> <b>name:</b> {{ val.name.0 }} <br> <b>url:</b> <a>{{ val.url.0 }}</a> </p>
 				<hr>
 			{% endfor %}

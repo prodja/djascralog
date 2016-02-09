@@ -1,8 +1,0 @@
-#mysite_uwsgi.ini 
-[uwsgi]
-chdir           = /home/faa/venvs/env27/bin/firstapp
-module          = firstapp.wsgi:application
-home            = /home/faa/venvs/env27
-master          = true
-socket          = 127.0.0.1:3031
-vacuum          = true
