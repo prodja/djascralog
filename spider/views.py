@@ -3,6 +3,13 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response
 from forms import SearchForm
 from fns import sel_from_elast
+from django.http import HttpResponse
+
+from django.views.decorators.cache import cache_page
+from django.views.decorators.csrf import csrf_protect
+
+@cache_page(60 * 15)
+@csrf_protect
 
 def spider(request, page=1, zap_from_get=''):
 	""" кол-во выводимых товаров на одной странице (size)"""
@@ -14,9 +21,11 @@ def spider(request, page=1, zap_from_get=''):
 	pages=[]
 	page_count=0
 	__fields = ['name', 'code', 'url']
+	template='spider.html'
+	search_form = SearchForm()
 
 	""" Если запрос пришел из формы """
-	if request.POST:
+	if request.POST and not request.is_ajax():
 		search_form = SearchForm(request.POST)
 
 		""" Проверка пришедшего с формы и его подготовка к запросу в эластик """
@@ -30,7 +39,7 @@ def spider(request, page=1, zap_from_get=''):
 			""" Запрос в эластик и получение товаров """
 			items, pages, page_count = sel_from_elast(find, __fields, size_s=hits_count, form_s=int(page)-1)
 			
-	else:
+	elif request.method == "GET" and not request.is_ajax():
 		
 		""" Если запрос пришел с url'а (с постраничника) """ 
 		search_form = SearchForm()
@@ -43,6 +52,13 @@ def spider(request, page=1, zap_from_get=''):
 			""" Делаем запрос в эластик и получаем товары """
 			items, pages, page_count = sel_from_elast(zap_from_get, __fields, size_s=hits_count, form_s=int(page)-1)
 
+
+	elif request.is_ajax():
+		zap_from_get=request.POST.get('search_ajax')
+		print 'ajax='+str(zap_from_get)
+		template='items.html'
+		items, pages, page_count = sel_from_elast(zap_from_get, __fields, size_s=hits_count, form_s=int(page)-1)
+
 	context = {
 		'spider': spider_id,
 		'items': items,
@@ -52,5 +68,5 @@ def spider(request, page=1, zap_from_get=''):
 		'search_form': search_form
 	}
 
-	return render_to_response('spider.html', context, context_instance=RequestContext(request))
+	return render_to_response(template, context, context_instance=RequestContext(request))
 

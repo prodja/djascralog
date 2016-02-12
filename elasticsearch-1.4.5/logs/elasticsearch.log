@@ -1,56 +1,15 @@
-[2016-02-09 11:13:49,637][INFO ][node                     ] [Dougboy] version[1.4.5], pid[4081], build[2aaf797/2015-04-27T08:06:06Z]
-[2016-02-09 11:13:49,638][INFO ][node                     ] [Dougboy] initializing ...
-[2016-02-09 11:13:49,668][INFO ][plugins                  ] [Dougboy] loaded [], sites [head]
-[2016-02-09 11:13:55,831][INFO ][node                     ] [Dougboy] initialized
-[2016-02-09 11:13:55,832][INFO ][node                     ] [Dougboy] starting ...
-[2016-02-09 11:13:56,049][INFO ][transport                ] [Dougboy] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
-[2016-02-09 11:13:56,102][INFO ][discovery                ] [Dougboy] elasticsearch/qd8bxsYgTIW2eAycKMssKg
-[2016-02-09 11:13:59,875][INFO ][cluster.service          ] [Dougboy] new_master [Dougboy][qd8bxsYgTIW2eAycKMssKg][faa-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
-[2016-02-09 11:13:59,909][INFO ][http                     ] [Dougboy] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
-[2016-02-09 11:13:59,910][INFO ][node                     ] [Dougboy] started
-[2016-02-09 11:14:00,985][INFO ][gateway                  ] [Dougboy] recovered [1] indices into cluster_state
-[2016-02-09 13:49:12,150][INFO ][node                     ] [Dougboy] stopping ...
-[2016-02-09 13:49:12,383][INFO ][node                     ] [Dougboy] stopped
-[2016-02-09 13:49:12,384][INFO ][node                     ] [Dougboy] closing ...
-[2016-02-09 13:49:12,443][INFO ][node                     ] [Dougboy] closed
-[2016-02-09 13:56:39,912][INFO ][node                     ] [Chaka] version[1.4.5], pid[5547], build[2aaf797/2015-04-27T08:06:06Z]
-[2016-02-09 13:56:39,913][INFO ][node                     ] [Chaka] initializing ...
-[2016-02-09 13:56:39,932][INFO ][plugins                  ] [Chaka] loaded [], sites [head]
-[2016-02-09 13:56:44,279][INFO ][node                     ] [Chaka] initialized
-[2016-02-09 13:56:44,279][INFO ][node                     ] [Chaka] starting ...
-[2016-02-09 13:56:44,416][INFO ][transport                ] [Chaka] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
-[2016-02-09 13:56:44,487][INFO ][discovery                ] [Chaka] elasticsearch/_Zlr8sctQPuMAwy9PORGLw
-[2016-02-09 13:56:48,278][INFO ][cluster.service          ] [Chaka] new_master [Chaka][_Zlr8sctQPuMAwy9PORGLw][faa-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
-[2016-02-09 13:56:48,306][INFO ][http                     ] [Chaka] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
-[2016-02-09 13:56:48,306][INFO ][node                     ] [Chaka] started
-[2016-02-09 13:56:49,286][INFO ][gateway                  ] [Chaka] recovered [1] indices into cluster_state
-[2016-02-09 15:18:28,142][INFO ][node                     ] [Chaka] stopping ...
-[2016-02-09 15:18:28,216][INFO ][node                     ] [Chaka] stopped
-[2016-02-09 15:18:28,216][INFO ][node                     ] [Chaka] closing ...
-[2016-02-09 15:18:28,226][INFO ][node                     ] [Chaka] closed
-[2016-02-09 17:41:01,639][INFO ][node                     ] [Volstagg] version[1.4.5], pid[9435], build[2aaf797/2015-04-27T08:06:06Z]
-[2016-02-09 17:41:01,656][INFO ][node                     ] [Volstagg] initializing ...
-[2016-02-09 17:41:01,720][INFO ][plugins                  ] [Volstagg] loaded [], sites [head]
-[2016-02-09 17:41:07,372][INFO ][node                     ] [Volstagg] initialized
-[2016-02-09 17:41:07,373][INFO ][node                     ] [Volstagg] starting ...
-[2016-02-09 17:41:07,620][INFO ][transport                ] [Volstagg] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.10.35:9300]}
-[2016-02-09 17:41:07,675][INFO ][discovery                ] [Volstagg] elasticsearch/hg1ofT0KSEm9eNGorYdqAg
-[2016-02-09 17:41:11,454][INFO ][cluster.service          ] [Volstagg] new_master [Volstagg][hg1ofT0KSEm9eNGorYdqAg][faa-Lenovo-V580c][inet[/192.168.10.35:9300]], reason: zen-disco-join (elected_as_master)
-[2016-02-09 17:41:11,488][INFO ][http                     ] [Volstagg] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.10.35:9200]}
-[2016-02-09 17:41:11,489][INFO ][node                     ] [Volstagg] started
-[2016-02-09 17:41:12,626][INFO ][gateway                  ] [Volstagg] recovered [1] indices into cluster_state
-[2016-02-09 17:58:20,985][INFO ][node                     ] [Volstagg] stopping ...
-[2016-02-09 17:58:21,076][INFO ][node                     ] [Volstagg] stopped
-[2016-02-09 17:58:21,076][INFO ][node                     ] [Volstagg] closing ...
-[2016-02-09 17:58:21,083][INFO ][node                     ] [Volstagg] closed
-[2016-02-09 21:12:42,647][INFO ][node                     ] [Cold War] version[1.4.5], pid[29125], build[2aaf797/2015-04-27T08:06:06Z]
-[2016-02-09 21:12:42,649][INFO ][node                     ] [Cold War] initializing ...
-[2016-02-09 21:12:42,667][INFO ][plugins                  ] [Cold War] loaded [], sites [head]
-[2016-02-09 21:12:48,191][INFO ][node                     ] [Cold War] initialized
-[2016-02-09 21:12:48,197][INFO ][node                     ] [Cold War] starting ...
-[2016-02-09 21:12:48,642][INFO ][transport                ] [Cold War] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.23:9300]}
-[2016-02-09 21:12:48,792][INFO ][discovery                ] [Cold War] elasticsearch/yEfozy3_RGqrENmhXLKkdg
-[2016-02-09 21:12:52,639][INFO ][cluster.service          ] [Cold War] new_master [Cold War][yEfozy3_RGqrENmhXLKkdg][faa-HP-15-Notebook-PC][inet[/192.168.1.23:9300]], reason: zen-disco-join (elected_as_master)
-[2016-02-09 21:12:52,693][INFO ][http                     ] [Cold War] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.23:9200]}
-[2016-02-09 21:12:52,694][INFO ][node                     ] [Cold War] started
-[2016-02-09 21:12:53,704][INFO ][gateway                  ] [Cold War] recovered [1] indices into cluster_state
+[2016-02-12 11:51:48,581][INFO ][node                     ] [Cold War] stopping ...
+[2016-02-12 11:51:49,326][INFO ][node                     ] [Cold War] stopped
+[2016-02-12 11:51:49,326][INFO ][node                     ] [Cold War] closing ...
+[2016-02-12 11:51:49,363][INFO ][node                     ] [Cold War] closed
+[2016-02-12 11:58:35,373][INFO ][node                     ] [Maximus] version[1.4.5], pid[3819], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-02-12 11:58:35,394][INFO ][node                     ] [Maximus] initializing ...
+[2016-02-12 11:58:35,549][INFO ][plugins                  ] [Maximus] loaded [], sites [head]
+[2016-02-12 11:58:44,249][INFO ][node                     ] [Maximus] initialized
+[2016-02-12 11:58:44,251][INFO ][node                     ] [Maximus] starting ...
+[2016-02-12 11:58:44,668][INFO ][transport                ] [Maximus] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.23:9300]}
+[2016-02-12 11:58:44,782][INFO ][discovery                ] [Maximus] elasticsearch/MxI9S8bpSbuhnqwnYrEACA
+[2016-02-12 11:58:48,605][INFO ][cluster.service          ] [Maximus] new_master [Maximus][MxI9S8bpSbuhnqwnYrEACA][faa-HP-15-Notebook-PC][inet[/192.168.1.23:9300]], reason: zen-disco-join (elected_as_master)
+[2016-02-12 11:58:48,656][INFO ][http                     ] [Maximus] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.23:9200]}
+[2016-02-12 11:58:48,658][INFO ][node                     ] [Maximus] started
+[2016-02-12 11:58:50,162][INFO ][gateway                  ] [Maximus] recovered [1] indices into cluster_state

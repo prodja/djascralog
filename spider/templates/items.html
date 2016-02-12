@@ -1,0 +1,9 @@
+	{% if items %}
+			Результаты по '{{ zap_from_get }}':<br><br>
+			<div class="large-offset-1 large-10 columns">
+			{% for val in items %}
+				<p> <b>Code:</b> {{ val.code.0 }} <br> <b>name:</b> {{ val.name.0 }} <br> <b>url:</b> <a>{{ val.url.0 }}</a> </p>
+				<hr>
+			{% endfor %}
+			</div>
+	{% endif %}

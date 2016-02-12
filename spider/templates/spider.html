@@ -1,16 +1,7 @@
 {% extends  'main.html' %}
 {% load static %}
 {% block spider %}
-<script type="text/javascript" src="/media/js/jquery-2.2.0.min.js">
-		$('#id_search').keypress(function(eventObject){
-		  alert('Вы ввели символ с клавиатуры. Его код равен ' + eventObject.which);}
-	$(document).ready(function()
-	{
-		alert('asdasd')
-		$('#foo').keypress();
-	});
 
-</script>
 <div class="large-offset-1 large-12 columns">
 		<form action="/spider/" method="post" enctype="multipart/form-data">
 			{% csrf_token %}
@@ -22,16 +13,6 @@
 		{% for error in search_form.errors %}
 			{{error}}<br>
 		{% endfor %}
-		{% endif %}
-
-		{% if items %}
-			Результаты по '{{ zap_from_get }}':<br><br>
-			<div class="large-offset-1 large-10 columns">
-			{% for val in items %}
-				<p> <b>Code:</b> {{ val.code.0 }} <br> <b>name:</b> {{ val.name.0 }} <br> <b>url:</b> <a>{{ val.url.0 }}</a> </p>
-				<hr>
-			{% endfor %}
-			</div>
 		{% endif %}
 
 		<div class="row">
@@ -53,4 +34,40 @@
     </div>
 </div>
 </div>
+<script>
+var search = document.getElementById("id_search");
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+$(search).keyup(function(event){
+	if(event.keyCode>=48 && event.keyCode<=90)
+	{
+		var csrftoken = $.cookie('csrftoken');
+
+		text=$("#id_search").val()
+		if(text.length>2)
+		{
+			$.ajaxSetup
+			({
+  				beforeSend: function(xhr, settings) {
+	        	if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+	            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        		}
+    }
+			});
+
+			$.ajax
+			({
+				url: "/spider/",
+	            type: 'POST',
+	            data: {"search_ajax":text},
+	            success: function(){
+	                alert();
+	            }
+			});
+		}
+	}
+});
+</script>
 {% endblock %}
