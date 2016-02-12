@@ -14,7 +14,6 @@ from django.views.decorators.csrf import csrf_protect
 def spider(request, page=1, zap_from_get=''):
 	""" кол-во выводимых товаров на одной странице (size)"""
 	hits_count=7
-	
 	spider_id=1
 	curpage = 0
 	items = None
@@ -23,35 +22,15 @@ def spider(request, page=1, zap_from_get=''):
 	__fields = ['name', 'code', 'url']
 	template='spider.html'
 	search_form = SearchForm()
-
-	""" Если запрос пришел из формы """
-	if request.POST and not request.is_ajax():
-		search_form = SearchForm(request.POST)
-
-		""" Проверка пришедшего с формы и его подготовка к запросу в эластик """
-		if search_form.is_valid():
-
-			find=search_form.cleaned_data['search']			
 			
-			curpage = page
-			zap_from_get = find
-
-			""" Запрос в эластик и получение товаров """
-			items, pages, page_count = sel_from_elast(find, __fields, size_s=hits_count, form_s=int(page)-1)
-			
-	elif request.method == "GET" and not request.is_ajax():
-		
-		""" Если запрос пришел с url'а (с постраничника) """ 
-		search_form = SearchForm()
-
+	""" Если запрос пришел с url'а (с постраничника) """ 		
+	if request.method == "GET" and request.is_ajax():
+	
 		""" Если с постраничника пришел текст запроса с формы """
-		#if not zap_from_get:
 		if zap_from_get:			
-			search_form = SearchForm(initial={'search':zap_from_get})
-
+			template='items.html'
 			""" Делаем запрос в эластик и получаем товары """
 			items, pages, page_count = sel_from_elast(zap_from_get, __fields, size_s=hits_count, form_s=int(page)-1)
-
 
 	elif request.is_ajax():
 		zap_from_get=request.POST.get('search_ajax')

@@ -13,3 +13,7 @@
 [2016-02-12 11:58:48,656][INFO ][http                     ] [Maximus] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.23:9200]}
 [2016-02-12 11:58:48,658][INFO ][node                     ] [Maximus] started
 [2016-02-12 11:58:50,162][INFO ][gateway                  ] [Maximus] recovered [1] indices into cluster_state
+[2016-02-12 16:18:22,768][INFO ][node                     ] [Maximus] stopping ...
+[2016-02-12 16:18:22,899][INFO ][node                     ] [Maximus] stopped
+[2016-02-12 16:18:22,900][INFO ][node                     ] [Maximus] closing ...
+[2016-02-12 16:18:22,915][INFO ][node                     ] [Maximus] closed

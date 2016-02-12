@@ -1,9 +1,50 @@
 	{% if items %}
 			Результаты по '{{ zap_from_get }}':<br><br>
 			<div class="large-offset-1 large-10 columns">
+			<ul class="pagination">
+	   		 {% for page in pages %}
+
+	   			 {% if page == curpage %}
+	   				 <li class="current">
+	   					 <a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+	   			 {% else %}
+	   				 <li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+	   			 {% endif %}
+
+	   		 {% endfor %}
+   			</ul>
+
 			{% for val in items %}
 				<p> <b>Code:</b> {{ val.code.0 }} <br> <b>name:</b> {{ val.name.0 }} <br> <b>url:</b> <a>{{ val.url.0 }}</a> </p>
 				<hr>
 			{% endfor %}
+
+			<ul class="pagination">
+	   		 {% for page in pages %}
+
+	   			 {% if page == curpage %}
+	   				 <li class="current">
+	   					 <a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+	   			 {% else %}
+	   				 <li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+	   			 {% endif %}
+
+	   		 {% endfor %}
+   			</ul>
 			</div>
+
+			<script>
+
+				$('[hre]').click(function(event)
+				{
+					text=$("#id_search").val();
+					url=$(this).attr('hre');
+					if(text.length>2)
+					{
+						get_items('GET',text,url);
+					}
+				});
+
+			</script>
+
 	{% endif %}

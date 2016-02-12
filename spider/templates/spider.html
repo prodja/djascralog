@@ -2,72 +2,79 @@
 {% load static %}
 {% block spider %}
 
-<div class="large-offset-1 large-12 columns">
-		<form action="/spider/" method="post" enctype="multipart/form-data">
-			{% csrf_token %}
-			{{ search_form }}
-			<input type='image' src='/media/search.png' width='60' height='60'> 
-		</form>
+<div class="large-offset-0 large-12 columns">
+
+	<form action="/spider/" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ search_form }}
+		<!--<input type='image' src='/media/search.png' width='60' height='60'>--> 
+	</form>
 		
-		{% if search_form.errors  %}
-		{% for error in search_form.errors %}
-			{{error}}<br>
-		{% endfor %}
-		{% endif %}
+	{% if search_form.errors  %}
+	{% for error in search_form.errors %}
+		{{error}}<br>
+	{% endfor %}
+	{% endif %}
 
-		<div class="row">
-    <div class="large-12 large-offset-2 columns">
-   	 <ul class="pagination">
+	<div class="row">
+	    <div class="large-11 large-offset-1 columns">
+	    	<div class="data">
+	    		<!--items results from elastic (fns.py - request to elastic, template-items.html)-->	
+	    	</div>
+	    </div>
+	</div>
 
-   		 {% for page in pages %}
-
-   			 {% if page == curpage %}
-   				 <li class="current">
-   					 <a href="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
-   			 {% else %}
-   				 <li><a href="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
-   			 {% endif %}
-
-   		 {% endfor %}
-
-   		</ul>
-    </div>
 </div>
-</div>
+
 <script>
-var search = document.getElementById("id_search");
-function csrfSafeMethod(method) {
-    // these HTTP methods do not require CSRF protection
-    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-}
-$(search).keyup(function(event){
-	if(event.keyCode>=48 && event.keyCode<=90)
+
+	var search = document.getElementById("id_search");
+
+	$(search).keyup(function(event)
 	{
+		if((event.keyCode>=48 && event.keyCode<=90)||(event.keyCode==8)||(event.keyCode==46))
+		{
+			
+			text=$("#id_search").val()
+			if(text.length>2)
+			{
+				get_items('POST',text,'/spider/');
+			}
+		}
+	});
+
+	function get_items(method,search,url)
+	{
+		function csrfSafeMethod(method)
+		{
+	    // these HTTP methods do not require CSRF protection
+	    	return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+		}
+
 		var csrftoken = $.cookie('csrftoken');
 
-		text=$("#id_search").val()
-		if(text.length>2)
-		{
-			$.ajaxSetup
-			({
-  				beforeSend: function(xhr, settings) {
-	        	if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-	            xhr.setRequestHeader("X-CSRFToken", csrftoken);
-        		}
-    }
-			});
+		$.ajaxSetup
+		({
+				beforeSend: function(xhr, settings) 
+				{
+	        	if (!csrfSafeMethod(settings.type) && !this.crossDomain) 
+	        	{
+	            	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+    			}
+			}	
+		});
 
-			$.ajax
-			({
-				url: "/spider/",
-	            type: 'POST',
-	            data: {"search_ajax":text},
-	            success: function(){
-	                alert();
-	            }
-			});
-		}
+		$.ajax
+		({
+			url: url,
+            type: method,
+            dataType:'html',
+            data: {"search_ajax":search},
+            success: function(data){
+                $("div.data").html(data);
+            }
+		});
 	}
-});
+
 </script>
 {% endblock %}
