@@ -91,6 +91,7 @@ WSGI_APPLICATION = 'firstapp.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
+    #'OPTIONS': {'timeout': 20,},
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'our_db.sqlite3'),
