@@ -15,7 +15,31 @@
    			</ul>
 
 			{% for val in items %}
-				<p> <b>Code:</b> {{ val.code.0 }} <br> <b>name:</b> {{ val.name.0 }} <br> <b>url:</b> <a>{{ val.url.0 }}</a> </p>
+				<p> <b>Code:</b> {{ val.code.0 }} <br> <b>name:</b> {{ val.name.0 }} <br> <b>url:</b> <a>{{ val.url.0 }}</a> 
+				<br><b>price: </b>{{ val.price_reg.0 }}
+
+				{% if val.price_discount %}
+					<br><b>price discount: </b>{{ val.price_discount.0 }} 
+				{% endif %}
+				<br>
+				{% if val.price_reg_list %}
+				<br><i>price dynamic: </i>
+					{% for pr in val.price_reg_list %}
+					  <span style="margin-left:5px;">{{ pr }}</span>
+					{% endfor %}
+				{% endif %}
+
+				{% if val.price_discount_list %}
+				<br><i>price discount dynamic: </i>
+					{% for pr in val.price_discount_list %}
+					  <span style="margin-left:5px;">{{ pr }}</span>
+					{% endfor %}
+				{% endif %}
+
+
+
+				</p>
+
 				<hr>
 			{% endfor %}
 

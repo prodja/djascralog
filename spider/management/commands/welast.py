@@ -7,6 +7,7 @@ from sys import argv
 from spider.models import Price_gb
 from django.db import connection
 from datetime import datetime
+import datetime
 #import pdb; pdb.set_trace()
 class Command(BaseCommand):
 
@@ -26,7 +27,7 @@ class Command(BaseCommand):
 		for jsonline in fop:
 			jobj=loads(jsonline)
 			del jobj["_type"]
-			#es.index(index="gearbest_index",doc_type='product_type', body=jobj, id=jobj['code'])
+			es.index(index="gearbest_index",doc_type='product_type', body=jobj, id=jobj['code'])
 			
 			disc=0
 			reg=0
@@ -40,7 +41,7 @@ class Command(BaseCommand):
 			#cursor = connection.cursor()
 			#cursor.execute(insert)
 
-			add_price=Price_gb(price=reg,price_disc=disc,code=str(jobj['code']))
+			add_price=Price_gb(price=reg,price_disc=disc,code=str(jobj['code']),date=datetime.date.today())
 			add_price.save()
 
 			print 'code='+str(jobj['code'])

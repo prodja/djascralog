@@ -1,5 +1,8 @@
 #! coding: utf-8
+from spider.models import Price_gb
 from elasticsearch import Elasticsearch
+import datetime
+from django.utils import timezone
 
 def sel_from_elast(find='',fields=[], index_doc='gearbest_index',doctype='product_type',size_s=10,form_s=0):
 
@@ -20,10 +23,21 @@ def sel_from_elast(find='',fields=[], index_doc='gearbest_index',doctype='produc
 
 	"""Заполняем результатами выходной словарь"""
 	res=res['hits']['hits']
-	
 	finded =[]
+
 	for rs in res:
 		val = rs['fields']
+		price_list=Price_gb.objects.filter(code__exact=val['code'][0])
+		price_reg_list=[]
+		price_discount_list=[]
+
+		if(len(price_list)>0):
+			for p in price_list:
+				price_reg_list.append(p.price)
+				price_discount_list.append(p.price_disc)
+
+		val['price_reg_list']=price_reg_list
+		val['price_discount_list']=price_discount_list
 		finded.append(val)
-	print 'pgs='+ str(pages)
+
 	return finded, pages, page_count,

@@ -1,0 +1,11 @@
+[2016-02-13 09:38:52,726][INFO ][node                     ] [Bloodsport] version[1.4.5], pid[13701], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-02-13 09:38:52,729][INFO ][node                     ] [Bloodsport] initializing ...
+[2016-02-13 09:38:52,745][INFO ][plugins                  ] [Bloodsport] loaded [], sites [head]
+[2016-02-13 09:38:56,904][INFO ][node                     ] [Bloodsport] initialized
+[2016-02-13 09:38:56,905][INFO ][node                     ] [Bloodsport] starting ...
+[2016-02-13 09:38:57,173][INFO ][transport                ] [Bloodsport] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.23:9300]}
+[2016-02-13 09:38:57,228][INFO ][discovery                ] [Bloodsport] elasticsearch/F0cveud8SnC70wvT7y-2NA
+[2016-02-13 09:39:01,032][INFO ][cluster.service          ] [Bloodsport] new_master [Bloodsport][F0cveud8SnC70wvT7y-2NA][faa-HP-15-Notebook-PC][inet[/192.168.1.23:9300]], reason: zen-disco-join (elected_as_master)
+[2016-02-13 09:39:01,084][INFO ][http                     ] [Bloodsport] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.23:9200]}
+[2016-02-13 09:39:01,085][INFO ][node                     ] [Bloodsport] started
+[2016-02-13 09:39:02,420][INFO ][gateway                  ] [Bloodsport] recovered [1] indices into cluster_state
