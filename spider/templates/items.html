@@ -5,12 +5,12 @@
 	<ul class="pagination">
 		 {% for page in pages %}
 
-			 {% if page == curpage %}
-				 <li class="current">
-					 <a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
-			 {% else %}
-				 <li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
-			 {% endif %}
+			{% if page == curpage %}
+				<li class="current">
+					<a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+			{% else %}
+				<li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+			{% endif %}
 
 		 {% endfor %}
 		</ul>
@@ -44,12 +44,12 @@
 	<ul class="pagination">
 		 {% for page in pages %}
 
-			 {% if page == curpage %}
-				 <li class="current">
-					 <a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
-			 {% else %}
-				 <li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
-			 {% endif %}
+			{% if page == curpage %}
+				<li class="current">
+					<a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+			{% else %}
+				<li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+			{% endif %}
 
 		 {% endfor %}
 		</ul>
