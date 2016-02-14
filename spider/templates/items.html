@@ -1,74 +1,72 @@
-	{% if items %}
-			Результаты по '{{ zap_from_get }}':<br><br>
-			<div class="large-offset-1 large-10 columns">
-			<ul class="pagination">
-	   		 {% for page in pages %}
+{% if items %}
 
-	   			 {% if page == curpage %}
-	   				 <li class="current">
-	   					 <a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
-	   			 {% else %}
-	   				 <li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
-	   			 {% endif %}
+	Результаты по '{{ zap_from_get }}':<br><br>
+	<div class="large-offset-1 large-10 columns">
+	<ul class="pagination">
+		 {% for page in pages %}
 
-	   		 {% endfor %}
-   			</ul>
+			 {% if page == curpage %}
+				 <li class="current">
+					 <a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+			 {% else %}
+				 <li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+			 {% endif %}
 
-			{% for val in items %}
-				<p> <b>Code:</b> {{ val.code.0 }} <br> <b>name:</b> {{ val.name.0 }} <br> <b>url:</b> <a>{{ val.url.0 }}</a> 
-				<br><b>price: </b>{{ val.price_reg.0 }}
+		 {% endfor %}
+		</ul>
 
-				{% if val.price_discount %}
-					<br><b>price discount: </b>{{ val.price_discount.0 }} 
-				{% endif %}
-				<br>
-				{% if val.price_reg_list %}
-				<br><i>price dynamic: </i>
-					{% for pr in val.price_reg_list %}
-					  <span style="margin-left:5px;">{{ pr }}</span>
-					{% endfor %}
-				{% endif %}
+	{% for val in items %}
+		<p> 
+			<b>Code:</b> {{ val.code.0 }} <br> <b>name:</b> {{ val.name.0 }} <br> <b>url:</b> <a>{{ val.url.0 }}</a> 
+			<br><b>price: </b>{{ val.price_reg.0 }}
 
-				{% if val.price_discount_list %}
-				<br><i>price discount dynamic: </i>
-					{% for pr in val.price_discount_list %}
-					  <span style="margin-left:5px;">{{ pr }}</span>
-					{% endfor %}
-				{% endif %}
+			{% if val.price_discount %}
+				<br><b>price discount: </b>{{ val.price_discount.0 }} 
+			{% endif %}
+			<br>
+			{% if val.price_reg_list %}
+			<br><i>price dynamic: </i>
+				{% for pr in val.price_reg_list %}
+				  <span style="margin-left:5px;">{{ pr }}</span>
+				{% endfor %}
+			{% endif %}
 
+			{% if val.price_discount_list %}
+			<br><i>price discount dynamic: </i>
+				{% for pr in val.price_discount_list %}
+				  <span style="margin-left:5px;">{{ pr }}</span>
+				{% endfor %}
+			{% endif %}
+		</p>
+		<hr>
+	{% endfor %}
 
+	<ul class="pagination">
+		 {% for page in pages %}
 
-				</p>
+			 {% if page == curpage %}
+				 <li class="current">
+					 <a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+			 {% else %}
+				 <li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+			 {% endif %}
 
-				<hr>
-			{% endfor %}
+		 {% endfor %}
+		</ul>
+	</div>
 
-			<ul class="pagination">
-	   		 {% for page in pages %}
+	<script>
 
-	   			 {% if page == curpage %}
-	   				 <li class="current">
-	   					 <a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
-	   			 {% else %}
-	   				 <li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
-	   			 {% endif %}
+		$('[hre]').click(function(event)
+		{
+			text=$("#id_search").val();
+			url=$(this).attr('hre');
+			if(text.length>2)
+			{
+				get_items('GET',text,url);
+			}
+		});
 
-	   		 {% endfor %}
-   			</ul>
-			</div>
+	</script>
 
-			<script>
-
-				$('[hre]').click(function(event)
-				{
-					text=$("#id_search").val();
-					url=$(this).attr('hre');
-					if(text.length>2)
-					{
-						get_items('GET',text,url);
-					}
-				});
-
-			</script>
-
-	{% endif %}
+{% endif %}
