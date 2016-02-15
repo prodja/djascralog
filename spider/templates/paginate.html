@@ -1,0 +1,18 @@
+{% extends  'items.html' %}
+{% load staticfiles %}
+
+{% block paginate %}
+	<ul class="pagination">
+		asdsfsdf
+		 {% for page in pages %}
+
+			{% if page == curpage %}
+				<li class="current">
+					<a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+			{% else %}
+				<li><a hre="/spider/{{ page }}/{{ zap_from_get }}/">{{ page }}</a></li>
+			{% endif %}
+
+		 {% endfor %}
+	</ul>
+{% endblock %}

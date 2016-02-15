@@ -5,12 +5,6 @@ from forms import SearchForm
 from fns import sel_from_elast
 from django.http import HttpResponse
 
-import datetime
-from django.views.decorators.cache import cache_page
-from django.views.decorators.csrf import csrf_protect
-
-@cache_page(60 * 15)
-@csrf_protect
 
 def spider(request, page=1, zap_from_get=''):
 	""" кол-во выводимых товаров на одной странице (size)"""
@@ -22,12 +16,7 @@ def spider(request, page=1, zap_from_get=''):
 	page_count=0
 	__fields = ['name', 'code', 'url','price_reg','price_discount']
 	template='spider.html'
-	search_form = SearchForm()
-	
-	date = datetime.datetime.today()
-	newdate = date - datetime.timedelta(days=1)		
-
-	print datetime.date.today()
+	search_form = SearchForm()	
 
 	""" Если запрос пришел с url'а (с постраничника) """ 		
 	if request.method == "GET" and request.is_ajax():
@@ -38,7 +27,8 @@ def spider(request, page=1, zap_from_get=''):
 			""" Делаем запрос в эластик и получаем товары """
 			items, pages, page_count = sel_from_elast(zap_from_get, __fields, size_s=hits_count, form_s=int(page)-1)
 
-	elif request.is_ajax():
+	elif request.method == "POST" and request.is_ajax():
+		""" Если с формы """
 		zap_from_get=request.POST.get('search_ajax')
 		template='items.html'
 		items, pages, page_count = sel_from_elast(zap_from_get, __fields, size_s=hits_count, form_s=int(page)-1)

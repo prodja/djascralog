@@ -1,5 +1,6 @@
 {% extends  'main.html' %}
 {% load static %}
+
 {% block spider %}
 
 <div class="large-offset-0 large-12 columns">
@@ -29,23 +30,23 @@
 <script>
 
 	var search = document.getElementById("id_search");
-
+	//Аяксовое получение items после ввода 3х символов или цифр, или удаления символов
 	$(search).keyup(function(event)
 	{
 		if((event.keyCode>=48 && event.keyCode<=90)||(event.keyCode==8)||(event.keyCode==46))
 		{
 			
 			text=$("#id_search").val()
-			if(text.length>2)
+			if(text.length>2)//запрос будет, если минимум 3 символа в форме
 			{
-				get_items('POST',text,'/spider/');
+				get_items('POST',text,'/spider/');//получение аяксом items
 			}
 		}
 	});
 
 	function get_items(method,search,url)
 	{
-		function csrfSafeMethod(method)
+		function csrfSafeMethod(method)//чтоб не ругался CSRF
 		{
 	    // these HTTP methods do not require CSRF protection
 	    	return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
@@ -53,7 +54,7 @@
 
 		var csrftoken = $.cookie('csrftoken');
 
-		$.ajaxSetup
+		$.ajaxSetup//чтоб не ругался CSRF
 		({
 				beforeSend: function(xhr, settings) 
 				{
@@ -64,6 +65,7 @@
 			}	
 		});
 
+		//Собственно, аякс запрос в эластик
 		$.ajax
 		({
 			url: url,

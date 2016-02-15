@@ -1,0 +1,19 @@
+[2016-02-14 16:46:55,958][INFO ][node                     ] [Bloodsport] stopping ...
+[2016-02-14 16:46:56,037][INFO ][node                     ] [Bloodsport] stopped
+[2016-02-14 16:46:56,037][INFO ][node                     ] [Bloodsport] closing ...
+[2016-02-14 16:46:56,054][INFO ][node                     ] [Bloodsport] closed
+[2016-02-14 16:53:33,198][INFO ][node                     ] [Kurse] version[1.4.5], pid[25144], build[2aaf797/2015-04-27T08:06:06Z]
+[2016-02-14 16:53:33,200][INFO ][node                     ] [Kurse] initializing ...
+[2016-02-14 16:53:33,214][INFO ][plugins                  ] [Kurse] loaded [], sites [head]
+[2016-02-14 16:53:37,508][INFO ][node                     ] [Kurse] initialized
+[2016-02-14 16:53:37,509][INFO ][node                     ] [Kurse] starting ...
+[2016-02-14 16:53:37,778][INFO ][transport                ] [Kurse] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.1.23:9300]}
+[2016-02-14 16:53:37,826][INFO ][discovery                ] [Kurse] elasticsearch/YA1G2_y6ScKbGEJ_4_VVWQ
+[2016-02-14 16:53:41,627][INFO ][cluster.service          ] [Kurse] new_master [Kurse][YA1G2_y6ScKbGEJ_4_VVWQ][faa-HP-15-Notebook-PC][inet[/192.168.1.23:9300]], reason: zen-disco-join (elected_as_master)
+[2016-02-14 16:53:41,677][INFO ][http                     ] [Kurse] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.1.23:9200]}
+[2016-02-14 16:53:41,678][INFO ][node                     ] [Kurse] started
+[2016-02-14 16:53:42,908][INFO ][gateway                  ] [Kurse] recovered [1] indices into cluster_state
+[2016-02-14 17:08:58,812][INFO ][node                     ] [Kurse] stopping ...
+[2016-02-14 17:08:58,931][INFO ][node                     ] [Kurse] stopped
+[2016-02-14 17:08:58,932][INFO ][node                     ] [Kurse] closing ...
+[2016-02-14 17:08:58,952][INFO ][node                     ] [Kurse] closed
